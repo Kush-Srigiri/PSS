@@ -1,22 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SQLite;
 using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Project.services
 {
-    public class DB : IDisposable
+    public sealed class DB : IDisposable
     {
+        private static readonly Lazy<DB> instance = new Lazy<DB>(() => new DB());
         private readonly string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data");
         private readonly string fullpath;
         private readonly string connectionString;
         private readonly SQLiteConnection conn;
 
-        public DB()
+        private DB()
         {
             fullpath = Path.Combine(dbPath, "database.db");
             connectionString = $"Data Source={fullpath};Version=3;";
@@ -34,6 +30,16 @@ namespace Project.services
             conn.Open();
         }
 
+        /// <summary>
+        ///  Gets the instance of the database
+        /// </summary>
+        public static DB Instance => instance.Value;
+
+        /// <summary>
+        /// Executes a command on the db z.B. INSERT INTO User (username, password) VALUES ('John Doe', 'supersecred')
+        /// </summary>
+        /// <param name="query">comand Query z.B. CREATE TABLE (...)</param>
+        /// <param name="parameters">(Optional) params</param>
         public void Execute(string query, params string[] parameters)
         {
             if (conn.State != System.Data.ConnectionState.Open)
@@ -52,7 +58,11 @@ namespace Project.services
             }
         }
 
-
+        /// <summary>
+        /// looks up if the table already exists in the database
+        /// </summary>
+        /// <param name="tableName">name of the table you want to check</param>
+        /// <returns>Returns if it exists or not</returns>
         public bool TableExists(string tableName)
         {
             if (conn.State != System.Data.ConnectionState.Open)
@@ -70,8 +80,13 @@ namespace Project.services
             }
         }
 
-
-        public string[] Get(string query, params string[] parameters)
+        /// <summary>
+        /// Gets the data out of the database with the query
+        /// </summary>
+        /// <param name="query">the query to get the data z.B. SELECT * FROM ...</param>
+        /// <param name="parameters">(Optional) params</param>
+        /// <returns>returns string[,] of all the found database entries</returns>
+        public string[,] Get(string query, params string[] parameters)
         {
             if (conn.State != System.Data.ConnectionState.Open)
             {
@@ -84,27 +99,42 @@ namespace Project.services
                 {
                     cmd.Parameters.AddWithValue($"@param{i}", parameters[i]);
                 }
+                SQLiteDataReader reader;
 
-                using (SQLiteDataReader reader = cmd.ExecuteReader())
+                using (reader = cmd.ExecuteReader())
                 {
-                    if (reader.Read()) 
+                    if (reader.HasRows)
                     {
+                        int rowCount = 0;
                         int columnCount = reader.FieldCount;
-                        string[] result = new string[columnCount];
 
-                        for (int i = 0; i < columnCount; i++)
+                        while (reader.Read())
                         {
-                            result[i] = reader[i]?.ToString() ?? string.Empty; 
+                            rowCount++;
                         }
 
-                        return result; 
+                        reader.Close();
+                        reader = cmd.ExecuteReader();
+
+                        string[,] result = new string[rowCount, columnCount];
+
+                        int rowIndex = 0;
+                        while (reader.Read())
+                        {
+                            for (int colIndex = 0; colIndex < columnCount; colIndex++)
+                            {
+                                result[rowIndex, colIndex] = reader[colIndex]?.ToString() ?? string.Empty;
+                            }
+                            rowIndex++;
+                        }
+
+                        return result;
                     }
                 }
             }
 
-            return new string[0]; 
+            return new string[0, 0]; 
         }
-
 
 
         public void Dispose()
@@ -115,7 +145,5 @@ namespace Project.services
                 conn.Dispose();
             }
         }
-
     }
 }
-

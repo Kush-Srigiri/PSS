@@ -21,8 +21,9 @@
                             CornerRadius="1000"
                             Width="12"
                             Height="12"
-                            Cursor="Hand">
-            <Image Source="/x.png" Margin="1" Visibility="Hidden" Name="IconX" />
+                            Cursor="Hand"
+                            MouseLeftButtonDown="Close_Click">
+            <Image Source="/x.png" Margin="2" Visibility="Hidden" Name="IconX" />
           </Border>
 
           <!-- Spacer -->
@@ -63,7 +64,7 @@
             <PasswordBox x:Name="ConfirmPasword" Background="Transparent" Foreground="#526D96" Margin="10"
                                      FontSize="16" BorderBrush="Transparent" SelectionBrush="#00484744"
                                      BorderThickness="0"
-                                     FocusVisualStyle="{x:Null}" />
+                                     FocusVisualStyle="{x:Null}"/>
           </Border>
           <Label Name="PasswrodsError" Foreground="#EF9587" Content="Passwords must match" Visibility="Hidden" Margin="16,0,0,0" ></Label>
         </StackPanel>

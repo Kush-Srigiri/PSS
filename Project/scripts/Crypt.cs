@@ -7,11 +7,7 @@ using System.Windows;
 using System;
 using System.IO;
 using System.Security.Cryptography;
-using System.Text;
 using System;
-using System.IO;
-using System.Security.Cryptography;
-using System.Text;
 using CredentialManagement;
 
 namespace Project.scripts
