@@ -14,8 +14,6 @@ namespace Project
         public MainWindow()
         {
             InitializeComponent();
-
-
             DB db = DB.Instance;
 
             if (db.TableExists("User"))

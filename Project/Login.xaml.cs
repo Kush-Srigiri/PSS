@@ -43,7 +43,7 @@ namespace Project
         public Login(DB db)
         {
             this.db = db;
-            udl = new(db.Get("SELECT*FROM User")[1], db.Get("SELECT*FROM User")[2], false);
+            udl = new(db.Get("SELECT*FROM User")[0,1], db.Get("SELECT*FROM User")[0,2], false);
             InitializeComponent();
             this.ShowInTaskbar = true;
             this.EmailTbx.Focus();

@@ -54,12 +54,9 @@ public partial class Setup : Window
 
         db.Execute("INSERT INTO User(id, email, password) VALUES ('1', ?, ?)", this.EmailTbx.Text, UserDataLogin.HashPassword(this.PasswordTbx.Password));
 
-        string[] s = db.Get("SELECT * FROM User");
+        AppDataSave_service appData = new();
 
-        foreach (string s2 in s) 
-        {
-            Debug.WriteLine(s2);
-        }
+        appData.SaveUserLoginData(new UserDataLogin(this.EmailTbx.Text, this.PasswordTbx.Password));
 
         this.DialogResult = true;
         this.Close();

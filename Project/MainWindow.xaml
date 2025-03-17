@@ -5,53 +5,103 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project"
         mc:Ignorable="d"
+        xmlns:viewModel="clr-namespace:Project.MVVM.ViewModel"
         Title="MainWindow" Height="600" Width="1000"
         ResizeMode="NoResize"
         Background="Transparent"
         AllowsTransparency="True"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen">
+  <Window.DataContext>
+    <viewModel:MainViewModel/>
+  </Window.DataContext>
+
   <Border Background="#FEFBF3" CornerRadius="20" MouseDown="Border_MouseDown" BorderThickness="1" BorderBrush="Black">
     <StackPanel>
       <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
-      <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="16,0,0,0" Orientation="Horizontal"
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="16,0,0,0" Orientation="Horizontal"
                         MouseEnter="Border_MouseEnter"
                         MouseLeave="Border_MouseLeave" Width="500" AutomationProperties.IsOffscreenBehavior="Onscreen">
-        <Border x:Name="CloseButton"
+          <Border x:Name="CloseButton"
                         Background="#EF9587"
                         CornerRadius="1000"
                         Width="12"
                         Height="12"
                         Cursor="Hand"
                         MouseLeftButtonDown="Close_Click">
-          <Image Source="/x.png" Margin="2" Visibility="Hidden" x:Name="IconX" />
-        </Border>
+            <Image  Margin="2" Visibility="Hidden" x:Name="IconX" Source="/x.png" />
+          </Border>
 
-        <!-- Spacer -->
-        <Border Width="6" Background="Transparent"/>
+          <Border Width="6" Background="Transparent"/>
 
-        <!-- Minimize Button -->
-        <Border x:Name="MinimizeButton"
+          <Border x:Name="MinimizeButton"
                         Background="#FFD166"
                         CornerRadius="1000"
                         Width="12"
                         Height="12"
                         Cursor="Hand"
                         MouseLeftButtonDown="Minimize_Click">
-          <Image Source="/minus.png" Margin="2" Visibility="Hidden" x:Name="IconMinus" />
-        </Border>
+            <Image Source="/minus.png" Margin="2" Visibility="Hidden" x:Name="IconMinus" />
+          </Border>
 
-      </StackPanel>
-      <StackPanel Width="490" HorizontalAlignment="Right" VerticalAlignment="Center">
-        <Border Width="20" Height="20" CornerRadius="5" Background="LightGray" Padding="4"
+        </StackPanel>
+        <StackPanel Width="490" HorizontalAlignment="Right" VerticalAlignment="Center">
+          <Border Width="20" Height="20" CornerRadius="5" Background="LightGray" Padding="4"
                     MouseDown="Button_Click" HorizontalAlignment="Right" Margin="0,0,25,0" Visibility="Visible" Cursor="Hand">
-          <Image Source="/log-out.png"/>
-        </Border>
+            <Image Source="/log-out.png"/>
+          </Border>
+        </StackPanel>
       </StackPanel>
-      </StackPanel>
-    </StackPanel>
+      <Grid Margin="10,5,10,10" Height="550">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="200"/>
+          <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition/>
+        </Grid.RowDefinitions>
 
-    <!-- Other Content Besides the top bar-->
+        <StackPanel Grid.Column="0" Grid.Row="0">
+          <Border BorderBrush="#D3D3D3" BorderThickness="0,0,1,0" Height="550">
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+              </Grid.RowDefinitions>
+
+              <RadioButton 
+                Content="Home" 
+                Height="35" 
+                Style="{StaticResource MenuButtonTheme}" 
+                IsChecked="True" 
+                Command="{Binding HomeViewCommand}" 
+                Grid.Row="0"/>
+
+              <RadioButton 
+                Content="Artikel" 
+                Height="35" 
+                Style="{StaticResource MenuButtonTheme}" 
+                Command="{Binding ArtikelViewCommand}" 
+                Grid.Row="1"/>
+
+              <RadioButton 
+                Content="Settings" 
+                Height="35" 
+                Style="{StaticResource MenuButtonTheme}" 
+                Command="{Binding SettingsViewCommand}" 
+                Grid.Row="3"/>
+            </Grid>
+          </Border>
+        </StackPanel>
+
+
+
+
+        <ContentControl Margin="5,0,0,0" Grid.Row="0" Grid.Column="1" Content="{Binding CurrentView}"/>
+      </Grid>
+    </StackPanel>
   </Border>
 
 </Window>
