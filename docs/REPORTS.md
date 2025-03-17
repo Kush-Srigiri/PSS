@@ -30,12 +30,12 @@
 ### 10.03.2025:  
 [Everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
 #### Description:
-
+Wir haben einen DB connection mit Single Tone erstellt
 
 ### 17.03.2025:  
 [Everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
 #### Description:
-
+Tabelle Artikel Hinzugefügt
 
 ### 24.03.2025:  
 [Everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
