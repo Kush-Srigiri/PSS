@@ -12,7 +12,7 @@
       <Border Height="100" 
                     Margin="0,5,0,0" 
                     CornerRadius="8" 
-                    Background="White" 
+                    Background="#fcf3db" 
                     BorderBrush="#E0E0E0" 
                     BorderThickness="1"
                     Padding="10">
@@ -36,7 +36,7 @@
       <Border  
                     Margin="0,5,0,0" 
                     CornerRadius="8" 
-                    Background="White" 
+                    Background="#fcf3db" 
                     BorderBrush="#E0E0E0" 
                     BorderThickness="1"
                     Padding="10">
