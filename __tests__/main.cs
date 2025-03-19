@@ -1,3 +1,4 @@
+using Project.objects.Items;
 using Project.services;
 
 namespace __tests__;
@@ -6,7 +7,11 @@ namespace __tests__;
 public class main
 {
     [TestMethod]
-    public void DB()
+    public void ArtikelListItemTest()
     {
+        var item = new ArtikelListItem("TestArtikel");
+        
+        Assert.IsNotNull(item);
+        Assert.AreSame(item.title, "TestArtikel");
     }
 }

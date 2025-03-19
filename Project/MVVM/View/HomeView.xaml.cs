@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Project.objects.Items;
 
 namespace Project.MVVM.View
 {
@@ -19,7 +21,7 @@ namespace Project.MVVM.View
     /// Interaktionslogik für HomeView.xaml
     /// </summary>
     public partial class HomeView : UserControl
-    {
+    {   
         public HomeView()
         {
             InitializeComponent();

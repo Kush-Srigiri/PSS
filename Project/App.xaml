@@ -11,6 +11,7 @@
       <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="pack://application:,,,/assets/Themes/MenuButtonTheme.xaml"/>
         <ResourceDictionary Source="pack://application:,,,/assets/Themes/RadioButtonTheme.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/assets/Themes/ListItem.xaml" />
         <ResourceDictionary Source="pack://application:,,,/assets/Themes/ButtonTheme.xaml"/>
       </ResourceDictionary.MergedDictionaries>
 
