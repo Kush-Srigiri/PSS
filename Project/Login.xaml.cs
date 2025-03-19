@@ -74,6 +74,7 @@ namespace Project
 
             if (obj != null)
             {
+                Debug.WriteLine(obj.Email == udl.Email && obj.PasswordHash == udl.PasswordHash);
                 if (obj.Email == udl.Email && obj.PasswordHash == udl.PasswordHash)
                 {
                     return true;

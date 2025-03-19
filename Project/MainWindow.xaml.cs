@@ -18,8 +18,6 @@ namespace Project
 
             if (db.TableExists("User"))
             {
-
-
                 Login login = new(db);
 
                 this.Hide();

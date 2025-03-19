@@ -24,11 +24,8 @@
           <Image Source="/x.png" Margin="2" Visibility="Hidden" Name="IconX" />
         </Border>
 
-        <!-- Spacer -->
         <Border Width="6" Background="Transparent"></Border>
-
         
-
         <Border Background="Transparent" Width="750">
         </Border>
       </StackPanel>

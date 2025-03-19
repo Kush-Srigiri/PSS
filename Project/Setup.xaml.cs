@@ -42,8 +42,31 @@ public partial class Setup : Window
         return false;
     }
 
-    private void CreateAccount()
+    private void PasswordTbx_KeyDown(object sender, KeyEventArgs e)
     {
+        if (e.Key == Key.Enter)
+        {
+            CreateAccount();
+        }
+    }
+
+    private void Border_MouseEnter(object sender, MouseEventArgs e)
+    {
+        this.IconX.Visibility = Visibility.Visible;
+    }
+
+    private void Border_MouseLeave(object sender, MouseEventArgs e)
+    {
+        this.IconX.Visibility = Visibility.Hidden;
+    }
+
+    private async void CreateAccount()
+    {
+        SetupScreen.Visibility = Visibility.Collapsed;
+        LoadingScreen.Visibility = Visibility.Visible;
+        
+        await Task.Delay(500);
+        
         db.Execute(@"
             CREATE TABLE IF NOT EXISTS User (
                 id INTEGER PRIMARY KEY CHECK (id = 1), 
@@ -56,7 +79,7 @@ public partial class Setup : Window
 
         AppDataSave_service appData = new();
 
-        appData.SaveUserLoginData(new UserDataLogin(this.EmailTbx.Text, this.PasswordTbx.Password));
+        appData.SaveUserLoginData(new UserDataLogin(this.EmailTbx.Text, this.PasswordTbx.Password, true));
 
         this.DialogResult = true;
         this.Close();
