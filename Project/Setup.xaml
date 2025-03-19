@@ -82,30 +82,26 @@
         </StackPanel>
       </StackPanel>
       <Grid x:Name="LoadingScreen" Visibility="Collapsed">
-        <StackPanel Height="400" Visibility="Visible">
-
-          <Image Visibility="Visible"
-                       x:Name="LoadingImg"
-                       Margin="5,177.5,5,0"
-                       RenderTransformOrigin="0.5,0.5" Width="25" HorizontalAlignment="Center" VerticalAlignment="Center" Source="/loader-circle-dark.png">
-            <Image.RenderTransform>
-              <RotateTransform x:Name="RotateTransform" Angle="0" />
-            </Image.RenderTransform>
-            <Image.Triggers>
-              <EventTrigger RoutedEvent="Loaded">
-                <BeginStoryboard>
-                  <Storyboard RepeatBehavior="Forever">
-                    <DoubleAnimation
-                                        Storyboard.TargetProperty="(UIElement.RenderTransform).(RotateTransform.Angle)"
-                                        From="0"
-                                        To="360"
-                                        Duration="0:0:1" />
-                  </Storyboard>
-                </BeginStoryboard>
-              </EventTrigger>
-            </Image.Triggers>
-          </Image>
-        </StackPanel>
+        <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+          <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,192,0,0">
+            <Grid Width="20" Height="20">
+              <Ellipse Name="circle1" Width="20" Height="20" Stroke="LightGray" StrokeThickness="2"/>
+              <Ellipse Name="dot1" Width="16" Height="16" Fill="LightGray"/>
+            </Grid>
+            <Grid Width="20" Height="20" Margin="10,0,0,0">
+              <Ellipse Name="circle2" Width="20" Height="20" Stroke="LightGray" StrokeThickness="2"/>
+              <Ellipse Name="dot2" Width="16" Height="16" Fill="LightGray"/>
+            </Grid>
+            <Grid Width="20" Height="20" Margin="10,0,0,0">
+              <Ellipse Name="circle3" Width="20" Height="20" Stroke="LightGray" StrokeThickness="2"/>
+              <Ellipse Name="dot3" Width="16" Height="16" Fill="LightGray"/>
+            </Grid>
+            <Grid Width="20" Height="20" Margin="10,0,0,0">
+              <Ellipse Name="circle4" Width="20" Height="20" Stroke="LightGray" StrokeThickness="2"/>
+              <Ellipse Name="dot4" Width="16" Height="16" Fill="LightGray"/>
+            </Grid>
+          </StackPanel>
+        </Grid>
       </Grid>
     </StackPanel>
   </Border>
