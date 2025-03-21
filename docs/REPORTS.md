@@ -35,12 +35,15 @@ Wir haben einen DB connection mit Single Tone erstellt
 ### 17.03.2025:  
 [Everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
 #### Description:
-Tabelle Artikel Hinzugefügt
-
+- Tabelle Artikel Hinzugefügt
+- Added a scroll bar
+- Designed and implemeted Home screen
+ 
 ### 24.03.2025:  
 [Everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
 #### Description:
-
+- configured the scroll bar for better usability
+- Intigrated the Backend for Homescreen
 
 ### 31.03.2025:  
 [Everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
