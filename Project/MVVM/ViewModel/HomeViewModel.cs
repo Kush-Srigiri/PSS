@@ -5,7 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using Project.objects;
 using Project.objects.Items;
+using Project.services;
 
 namespace Project.MVVM.ViewModel
 {
@@ -16,12 +18,21 @@ namespace Project.MVVM.ViewModel
         public HomeViewModel()
         {
             Entries = new ObservableCollection<ArtikelListItem>();
-
-            for (int i = 1; i < 11; i++)
+            if (DB.Instance.TableExists("Artikel"))
             {
-                Entries.Add(new ArtikelListItem($"Artikel {i}"));
+                string[,] entries = DB.Instance.Get("SELECT * FROM Artikel");
+
+                int rows = entries.GetLength(0);
+                int cols = entries.GetLength(1);
+
+                for (int i = 0; i < rows; i++)
+                {
+                    for (int j = 0; j < cols; j++)
+                    {
+                        Console.WriteLine($"Row {i}, Column {j}: {entries[i, j]}");
+                    }
+                }
             }
         }
-        
     }
 }

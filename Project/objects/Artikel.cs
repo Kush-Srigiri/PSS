@@ -5,7 +5,8 @@ namespace Project.objects;
 public class Artikel
 {
     private DB _db;
-    public Guid ID { get; }
+
+    public int ID { get; private set; }
     public string name { get; private set; }
     public string description { get; private set; }
     public string unit { get; private set; }
@@ -14,23 +15,22 @@ public class Artikel
     public DateTime timestamp { get; private set; }
 
 
-    public Artikel(string name, string description, string unit, int StockQuantity, DateTime timestamp = new DateTime())
+    public Artikel(string name, string description, string unit, int StockQuantity)
     {
-        ID = Guid.NewGuid();
         this.name = name;
         this.description = description;
         this.unit = unit;
 
-        DB db = DB.Instance;
+        _db = DB.Instance;
         if (!_db.TableExists("Artikel"))
         {
             _db.Execute(@"
             Create table Artikel
                 (
-                    id            INT primary key AUTOINCREMENT,
+                    id            INTEGER PRIMARY KEY AUTOINCREMENT,
                     name          VARCHAR(255),
                     description   TEXT,
-                    unit          INT NOT NULL, 
+                    unit          VARCHAR(30) NOT NULL, 
                     StockQuantity INT NOT NULL, 
                     CreationDate  DATETIME DEFAULT CURRENT_TIMESTAMP
                 )

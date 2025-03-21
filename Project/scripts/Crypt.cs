@@ -13,7 +13,7 @@ using CredentialManagement;
 namespace Project.scripts
 {
 
-    class Crypt
+    public class Crypt
     {
         private const string KeyName = "Project"; // Unique key identifier
         private byte[] _key;
