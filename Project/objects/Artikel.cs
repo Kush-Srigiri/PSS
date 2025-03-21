@@ -20,6 +20,7 @@ public class Artikel
         this.name = name;
         this.description = description;
         this.unit = unit;
+        this.StockQuantity = StockQuantity;
 
         _db = DB.Instance;
         if (!_db.TableExists("Artikel"))

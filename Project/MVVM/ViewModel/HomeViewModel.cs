@@ -27,10 +27,7 @@ namespace Project.MVVM.ViewModel
 
                 for (int i = 0; i < rows; i++)
                 {
-                    for (int j = 0; j < cols; j++)
-                    {
-                        Console.WriteLine($"Row {i}, Column {j}: {entries[i, j]}");
-                    }
+                        Entries.Add(new ArtikelListItem(entries[i, 1]));
                 }
             }
         }

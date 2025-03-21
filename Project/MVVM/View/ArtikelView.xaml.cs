@@ -53,9 +53,7 @@ namespace Project.MVVM.View
                 return;
             }
 
-            Console.WriteLine(NameTextBox.Text + DescriptionTextBox.Text + UnitComboBox.Text + stockQuantity);
             var arl = new Artikel(NameTextBox.Text, DescriptionTextBox.Text, UnitComboBox.Text, stockQuantity);
-
             
             DB.Instance.Execute("INSERT INTO Artikel(name, description, unit, StockQuantity) VALUES (?,?,?,?)", arl.name, arl.description, arl.unit, arl.StockQuantity.ToString());
         }
