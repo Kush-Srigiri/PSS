@@ -1,5 +1,5 @@
 ### 10.02.2025:
-[Everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)
+[Everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)
 #### Description:
 
 - Deleted and restored the whole Repository
@@ -8,7 +8,7 @@
 
 
 ### 17.02.2025:  
-[Everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
+[Everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
 #### Description:
 
 - Discussed Process
@@ -18,42 +18,43 @@
 
 
 ### 24.02.2025:  
-[Everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
+[Everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
+@Everyone
 #### Description:
 - Holidays
 
 ### 03.03.2025:  
-[Everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
+[Everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
 #### Description:
 - Holidays
 
 ### 10.03.2025:  
-[Everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
+[Everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
 #### Description:
 Wir haben einen DB connection mit Single Tone erstellt
 
 ### 17.03.2025:  
-[Everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
+[Everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
 #### Description:
 Tabelle Artikel Hinzugefügt
 
 ### 24.03.2025:  
-[Everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
+[Everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
 #### Description:
 
 
 ### 31.03.2025:  
-[Everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
+[Everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
 #### Description:
 
 
 ### 07.04.2025:  
-[Everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
+[Everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
 #### Description:
 
 
 ### 14.04.2025:  
-[Everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
+[Everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
 #### Description:
 
 
