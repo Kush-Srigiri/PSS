@@ -19,7 +19,6 @@
 
 ### 24.02.2025:  
 [Everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
-@Everyone
 #### Description:
 - Holidays
 
