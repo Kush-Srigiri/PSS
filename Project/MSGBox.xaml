@@ -10,33 +10,45 @@
         AllowsTransparency="True"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen">
-        <Border Background="#FEFBF3" CornerRadius="20" BorderThickness="1" BorderBrush="Black" MouseDown="Border_MouseDown">
-                <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
-                        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="16,0,0,0" Orientation="Horizontal"
-                                    MouseEnter="Border_MouseEnter"
-                                    MouseLeave="Border_MouseLeave" Width="240" AutomationProperties.IsOffscreenBehavior="Onscreen">
-                                <Border x:Name="CloseButton"
-                                        Background="#EF9587"
-                                        CornerRadius="1000"
-                                        Width="12"
-                                        Height="12"
-                                        Cursor="Hand"
-                                        MouseLeftButtonDown="Close_Click">
-                                        <Image  Margin="2" Visibility="Hidden" x:Name="IconX" Source="/x.png" />
-                                </Border>
+    <Border Background="#FEFBF3" CornerRadius="20" BorderThickness="1" BorderBrush="Black" MouseDown="Border_MouseDown">
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+                <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,-3,0,0"
+                            Orientation="Horizontal"
+                            MouseEnter="Border_MouseEnter"
+                            MouseLeave="Border_MouseLeave" AutomationProperties.IsOffscreenBehavior="Onscreen">
+                    <Border x:Name="CloseButton"
+                            Background="#EF9587"
+                            CornerRadius="1000"
+                            Width="12"
+                            Height="12"
+                            Cursor="Hand"
+                            MouseLeftButtonDown="Close_Click">
+                        <Image Margin="2" Visibility="Hidden" x:Name="IconX" Source="/x.png" />
+                    </Border>
 
-                                <Border Width="6" Background="Transparent"/>
-
-                                <Border x:Name="MinimizeButton"
-                                        Background="#FFD166"
-                                        CornerRadius="1000"
-                                        Width="12"
-                                        Height="12"
-                                        Cursor="Hand"
-                                        MouseLeftButtonDown="Minimize_Click">
-                                        <Image Source="/minus.png" Margin="2" Visibility="Hidden" x:Name="IconMinus" />
-                                </Border>
-                        </StackPanel>
                 </StackPanel>
-        </Border>
+            </StackPanel>
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70" />
+                    <RowDefinition Height="5" />
+                    <RowDefinition Height="30" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="180" />
+                    <ColumnDefinition Width="18" />
+                    <ColumnDefinition Width="180" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Centered TextBlock spanning all columns -->
+                <TextBlock Margin="4,8" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="Your Text Here" FontFamily="{StaticResource Roboto}" />
+
+                <!-- Buttons -->
+                <Button Grid.Row="2" Style="{StaticResource ButtonTheme}" Width="180" Height="30" Grid.Column="0" Content="{Binding SecondarybuttonName, UpdateSourceTrigger=PropertyChanged}"  />
+                <Button Grid.Row="2" Style="{StaticResource ButtonTheme}" Width="180" Height="30" Grid.Column="2" Content="{Binding PrimarybuttonName, UpdateSourceTrigger=PropertyChanged}"  />
+            </Grid>
+
+        </StackPanel>
+    </Border>
 </Window>
