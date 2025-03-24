@@ -1,5 +1,5 @@
 ### 10.02.2025:
-[@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)
+[@all](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)
 #### Description:
 
 - Deleted and restored the whole Repository
