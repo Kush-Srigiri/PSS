@@ -6,6 +6,7 @@ using System.Windows;
 using System.Windows.Controls;
 using Microsoft.VisualBasic;
 using System.IO;
+using Project.services;
 
 namespace Project.MVVM.View
 {
@@ -52,7 +53,7 @@ namespace Project.MVVM.View
             appConfig.Save(ConfigurationSaveMode.Modified);
             ConfigurationManager.RefreshSection("UIAppearance");
         }
-        
+
 
         private void Import(object sender, RoutedEventArgs e)
         {
@@ -67,15 +68,13 @@ namespace Project.MVVM.View
                 path = openFileDialog.FileName;
             }
         }
-
-        private static readonly object _fileLock = new object();  
-
+        
         private async void Export(object sender, RoutedEventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog
             {
                 Title = "Save Your File",
-                Filter = "CSV Files (*.csv)|*.csv",
+                Filter = "CSV Files (*.csv)|*.csv|JSON Files (*.json)|*.json",
                 FileName = "Export",
                 DefaultExt = ".csv",
                 InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
@@ -83,59 +82,62 @@ namespace Project.MVVM.View
 
             if (saveFileDialog.ShowDialog() == true)
             {
-                string filename = saveFileDialog.SafeFileName;
-                string filepath = saveFileDialog.FileName;
+                string filePath = saveFileDialog.FileName;
 
-                var data = new List<string>();
-                for (int i = 1; i <= 3000; i++)  
+                if (Path.GetExtension(filePath).Equals(".csv", StringComparison.OrdinalIgnoreCase))
                 {
-                    data.Add($"Data{i},Data{i + 1},Data{i + 2}");
-                }
+                    string filename = saveFileDialog.SafeFileName;
+                    string filepath = saveFileDialog.FileName;
 
-                int chunkSize = data.Count / 6;
-                var chunk1 = data.Take(chunkSize).ToList();
-                var chunk2 = data.Skip(chunkSize).Take(chunkSize).ToList();
-                var chunk3 = data.Skip(chunkSize * 2).Take(chunkSize).ToList();
-                var chunk4 = data.Skip(chunkSize * 3).Take(chunkSize).ToList();
-                var chunk5 = data.Skip(chunkSize * 4).Take(chunkSize).ToList();
-                var chunk6 = data.Skip(chunkSize * 5).ToList();
+                    string[,] entries = DB.Instance.Get("SELECT * FROM Artikel");
 
-                var task1 = Task.Run(() => ProcessAndWriteChunk(chunk1, filepath));
-                var task2 = Task.Run(() => ProcessAndWriteChunk(chunk2, filepath));
-                var task3 = Task.Run(() => ProcessAndWriteChunk(chunk3, filepath));
-                var task4 = Task.Run(() => ProcessAndWriteChunk(chunk4, filepath));
-                var task5 = Task.Run(() => ProcessAndWriteChunk(chunk5, filepath));
-                var task6 = Task.Run(() => ProcessAndWriteChunk(chunk6, filepath));
+                    int rows = entries.GetLength(0);
+                    int cols = entries.GetLength(1);
 
-                await Task.WhenAll(task1, task2, task3, task4, task5, task6);
+                    string val = "id,name,description,unit,StockQuantity,timestamp\n";
 
-                MessageBox.Show($"{filename} saved successfully!", "Export Successful", MessageBoxButton.OK, MessageBoxImage.Information);
-            }
-        }
-
-        private void ProcessAndWriteChunk(List<string> chunk, string filepath)
-        {
-            try
-            {
-                lock (_fileLock) 
-                {
-                    using (StreamWriter strW = new StreamWriter(new FileStream(filepath, FileMode.Append)))
+                    for (int i = 0; i < rows; i++)
                     {
-                        foreach (var line in chunk)
+                        for (int j = 0; j < cols; j++)
                         {
-                            strW.WriteLine(line);
+                            if (j == cols - 1)
+                                val += entries[i, j];
+                            else
+                                val += entries[i, j] + ",";
                         }
+
+                        val += "\n";
                     }
+
+                    File.WriteAllText(filepath, val);
+                }
+                else
+                {
+                    string[,] entries = DB.Instance.Get("SELECT * FROM Artikel");
+
+                    int rows = entries.GetLength(0);
+                    int cols = entries.GetLength(1);
+
+                    var dataList = new System.Collections.Generic.List<System.Collections.Generic.Dictionary<string, string>>();
+
+                    for (int i = 0; i < rows; i++)
+                    {
+                        var rowDict = new System.Collections.Generic.Dictionary<string, string>();
+                        rowDict["id"] = entries[i, 0];
+                        rowDict["name"] = entries[i, 1];
+                        rowDict["description"] = entries[i, 2];
+                        rowDict["unit"] = entries[i, 3];
+                        rowDict["StockQuantity"] = entries[i, 4];
+                        rowDict["timestamp"] = entries[i, 5];
+
+                        dataList.Add(rowDict);
+                    }
+
+                    string json = System.Text.Json.JsonSerializer.Serialize(dataList, new System.Text.Json.JsonSerializerOptions { WriteIndented = true });
+
+                    File.WriteAllText(filePath, json);
                 }
             }
-            catch (Exception ex)
-            {
-                Dispatcher.Invoke(() =>
-                {
-                    MessageBox.Show($"Error: {ex.Message}", "Export Failed", MessageBoxButton.OK, MessageBoxImage.Error);
-                });
-            }
         }
-
     }
 }

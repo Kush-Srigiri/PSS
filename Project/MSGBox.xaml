@@ -1,0 +1,42 @@
+<Window x:Class="Project.MSGBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:Project"
+        mc:Ignorable="d"
+        Title="MSGBox" Height="150" Width="400"
+        Background="Transparent"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen">
+        <Border Background="#FEFBF3" CornerRadius="20" BorderThickness="1" BorderBrush="Black" MouseDown="Border_MouseDown">
+                <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+                        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="16,0,0,0" Orientation="Horizontal"
+                                    MouseEnter="Border_MouseEnter"
+                                    MouseLeave="Border_MouseLeave" Width="240" AutomationProperties.IsOffscreenBehavior="Onscreen">
+                                <Border x:Name="CloseButton"
+                                        Background="#EF9587"
+                                        CornerRadius="1000"
+                                        Width="12"
+                                        Height="12"
+                                        Cursor="Hand"
+                                        MouseLeftButtonDown="Close_Click">
+                                        <Image  Margin="2" Visibility="Hidden" x:Name="IconX" Source="/x.png" />
+                                </Border>
+
+                                <Border Width="6" Background="Transparent"/>
+
+                                <Border x:Name="MinimizeButton"
+                                        Background="#FFD166"
+                                        CornerRadius="1000"
+                                        Width="12"
+                                        Height="12"
+                                        Cursor="Hand"
+                                        MouseLeftButtonDown="Minimize_Click">
+                                        <Image Source="/minus.png" Margin="2" Visibility="Hidden" x:Name="IconMinus" />
+                                </Border>
+                        </StackPanel>
+                </StackPanel>
+        </Border>
+</Window>

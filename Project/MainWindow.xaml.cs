@@ -14,6 +14,9 @@ namespace Project
         public MainWindow()
         {
             InitializeComponent();
+            MSGBox msgBox = new MSGBox();
+            msgBox.Show();
+            
             DB db = DB.Instance;
 
             if (db.TableExists("User"))
