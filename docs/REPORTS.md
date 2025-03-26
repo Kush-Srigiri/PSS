@@ -30,7 +30,8 @@
 ### 10.03.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
 #### Description:
-Wir haben einen DB connection mit Single Tone erstellt
+- Created a db singletone
+- Finished the ER-Diagramm
 
 ### 17.03.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
@@ -44,6 +45,9 @@ Wir haben einen DB connection mit Single Tone erstellt
 #### Description:
 - configured the scroll bar for better usability
 - Intigrated the Backend for Homescreen
+- Added a Messagebox
+- Configured the close buttons
+- Added the ER-Diagramm
 
 ### 31.03.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
