@@ -6,47 +6,31 @@ namespace Project;
 
 public partial class MSGBox : Window
 {
-    private string _primarybuttonName = string.Empty;
-    public string PrimarybuttonName
+    public MSGBox(string msg)
     {
-        get { return _primarybuttonName; }
-        set
-        {
-            if (_primarybuttonName != value)
-            {
-                _primarybuttonName = value;
-                OnPropertyChanged(nameof(PrimarybuttonName));
-            }
-        }
-    }
-
-    private string _secundaryButtonName = string.Empty;
-    public string SecondarybuttonName
-    {
-        get { return _secundaryButtonName; }
-        set
-        {
-            if (_secundaryButtonName != value)
-            {
-                _secundaryButtonName = value;
-                OnPropertyChanged(nameof(SecondarybuttonName));
-            }
-        }
-    }
-
-
-    public MSGBox()
-    {
-        DataContext = this;
         InitializeComponent();
+        this.Msg.Text = msg;
     }
 
-    public MSGBox(string PrimaryButtonName, string SecondaryButtonName) : this()
+    public MSGBox(string msg ,string PrimaryButtonName, string SecondaryButtonName) : this(msg)
     {
-        this.PrimarybuttonName = PrimaryButtonName;
-        this.SecondarybuttonName = SecondaryButtonName;
+        this.PrimBtn.Content = PrimaryButtonName;
+        this.SecoBtn.Content = SecondaryButtonName;
+        this.PrimBtn.Click += new RoutedEventHandler(PrimBtn_Click);
+        this.SecoBtn.Click += new RoutedEventHandler(SecoBtn_Click);
     }
 
+    public virtual void PrimBtn_Click(object sender, RoutedEventArgs e)
+    {
+        this.DialogResult = true;
+        this.Close();
+    }
+
+    public virtual void SecoBtn_Click(object sender, RoutedEventArgs e)
+    {
+        this.DialogResult = false;
+        this.Close();
+    }
     public event PropertyChangedEventHandler PropertyChanged;
 
     protected void OnPropertyChanged(string propertyName)

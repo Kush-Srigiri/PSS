@@ -42,11 +42,11 @@
                 </Grid.ColumnDefinitions>
 
                 <!-- Centered TextBlock spanning all columns -->
-                <TextBlock Margin="4,8" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="Your Text Here" FontFamily="{StaticResource Roboto}" />
+                <TextBlock x:Name="Msg" Margin="4,8" FontSize="16" FontWeight="SemiBold" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" FontFamily="{StaticResource Roboto}" />
 
                 <!-- Buttons -->
-                <Button Grid.Row="2" Style="{StaticResource ButtonTheme}" Width="180" Height="30" Grid.Column="0" Content="{Binding SecondarybuttonName, UpdateSourceTrigger=PropertyChanged}"  />
-                <Button Grid.Row="2" Style="{StaticResource ButtonTheme}" Width="180" Height="30" Grid.Column="2" Content="{Binding PrimarybuttonName, UpdateSourceTrigger=PropertyChanged}"  />
+                <Button x:Name="PrimBtn" Grid.Row="2" Content="Ok" FontSize="14" FontWeight="SemiBold" Style="{StaticResource ButtonTheme}" Width="180" Height="30" Grid.Column="0" />
+                <Button x:Name="SecoBtn" Grid.Row="2" Content="Cancel" FontSize="14" FontWeight="SemiBold" Style="{StaticResource ButtonTheme}" Width="180" Height="30" Grid.Column="2"  />
             </Grid>
 
         </StackPanel>

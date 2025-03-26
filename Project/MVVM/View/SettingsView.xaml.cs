@@ -68,27 +68,28 @@ namespace Project.MVVM.View
                 path = openFileDialog.FileName;
             }
         }
-        
+
         private async void Export(object sender, RoutedEventArgs e)
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog
+            MSGBox msgBox = new MSGBox("Export as Json/csv", "Json", "csv");
+            msgBox.ShowDialog();
+            if (msgBox.DialogResult == false)
             {
-                Title = "Save Your File",
-                Filter = "CSV Files (*.csv)|*.csv|JSON Files (*.json)|*.json",
-                FileName = "Export",
-                DefaultExt = ".csv",
-                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
-            };
-
-            if (saveFileDialog.ShowDialog() == true)
-            {
-                string filePath = saveFileDialog.FileName;
-
-                if (Path.GetExtension(filePath).Equals(".csv", StringComparison.OrdinalIgnoreCase))
+                SaveFileDialog saveFileDialog = new SaveFileDialog
                 {
-                    string filename = saveFileDialog.SafeFileName;
-                    string filepath = saveFileDialog.FileName;
+                    Title = "Save Your File",
+                    Filter = "CSV Files (*.csv)|*.csv", // Removed extra space after '|'
+                    FileName = "Export",
+                    DefaultExt = "csv", // No dot needed
+                    InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
+                };
+                saveFileDialog.ShowDialog();   
 
+                string filepath = saveFileDialog.FileName;
+                string filename = saveFileDialog.SafeFileName;
+
+                if (DB.Instance.TableExists("Artikel"))
+                {
                     string[,] entries = DB.Instance.Get("SELECT * FROM Artikel");
 
                     int rows = entries.GetLength(0);
@@ -111,14 +112,32 @@ namespace Project.MVVM.View
 
                     File.WriteAllText(filepath, val);
                 }
-                else
+            }
+            else
+            {
+                SaveFileDialog saveFileDialog = new SaveFileDialog
+                {
+                    Title = "Save Your File",
+                    Filter = "JSON Files (*.json)|*.json",
+                    FileName = "Export",
+                    DefaultExt = "json",
+                    InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
+                };
+
+                saveFileDialog.ShowDialog();   
+
+                string filepath = saveFileDialog.FileName;
+                string filename = saveFileDialog.SafeFileName;
+
+                if (DB.Instance.TableExists("Artikel"))
                 {
                     string[,] entries = DB.Instance.Get("SELECT * FROM Artikel");
 
                     int rows = entries.GetLength(0);
                     int cols = entries.GetLength(1);
 
-                    var dataList = new System.Collections.Generic.List<System.Collections.Generic.Dictionary<string, string>>();
+                    var dataList =
+                        new System.Collections.Generic.List<System.Collections.Generic.Dictionary<string, string>>();
 
                     for (int i = 0; i < rows; i++)
                     {
@@ -133,9 +152,10 @@ namespace Project.MVVM.View
                         dataList.Add(rowDict);
                     }
 
-                    string json = System.Text.Json.JsonSerializer.Serialize(dataList, new System.Text.Json.JsonSerializerOptions { WriteIndented = true });
+                    string json = System.Text.Json.JsonSerializer.Serialize(dataList,
+                        new System.Text.Json.JsonSerializerOptions { WriteIndented = true });
 
-                    File.WriteAllText(filePath, json);
+                    File.WriteAllText(filepath, json);
                 }
             }
         }

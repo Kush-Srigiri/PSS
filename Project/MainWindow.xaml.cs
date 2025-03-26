@@ -14,8 +14,6 @@ namespace Project
         public MainWindow()
         {
             InitializeComponent();
-            MSGBox msgBox = new MSGBox("ok", "cancel");
-            msgBox.Show();
             
             DB db = DB.Instance;
 
