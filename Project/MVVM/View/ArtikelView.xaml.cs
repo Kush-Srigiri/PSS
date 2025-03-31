@@ -11,6 +11,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -36,8 +37,16 @@ namespace Project.MVVM.View
         }
 
 
-        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        private async void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
+            StartAnimation(circle1, dot1, 0);
+            StartAnimation(circle2, dot2, 0.3);
+            StartAnimation(circle3, dot3, 0.6);
+            StartAnimation(circle4, dot4, 0.9);
+            
+            Input.Visibility = Visibility.Collapsed;
+            LoadingScreen.Visibility = Visibility.Visible;
+            
             if (string.IsNullOrWhiteSpace(NameTextBox.Text) ||
                 string.IsNullOrWhiteSpace(DescriptionTextBox.Text) ||
                 string.IsNullOrWhiteSpace(UnitComboBox.Text) ||
@@ -56,6 +65,62 @@ namespace Project.MVVM.View
             var arl = new Artikel(NameTextBox.Text, DescriptionTextBox.Text, UnitComboBox.Text, stockQuantity);
             
             DB.Instance.Execute("INSERT INTO Artikel(name, description, unit, StockQuantity) VALUES (?,?,?,?)", arl.name, arl.description, arl.unit, arl.StockQuantity.ToString());
+            
+            UnitComboBox.Text = "";
+            StockQuantityTextBox.Text = "";
+            DescriptionTextBox.Text = "";
+            NameTextBox.Text = "";
+            
+            await Task.Delay(500);
+            
+            LoadingScreen.Visibility = Visibility.Collapsed;
+            Input.Visibility = Visibility.Visible;
         }
+        
+          private void StartAnimation(Ellipse circle, Ellipse dot, double delay)
+          {
+            DoubleAnimation scaleAnim = new DoubleAnimation
+            {
+              From = 1.0,
+              To = 1.5,
+              Duration = TimeSpan.FromSeconds(1),
+              AutoReverse = true,
+              RepeatBehavior = RepeatBehavior.Forever,
+              BeginTime = TimeSpan.FromSeconds(delay)
+            };
+        
+            DoubleAnimation opacityAnim = new DoubleAnimation
+            {
+              From = 1.0,
+              To = 0.5,
+              Duration = TimeSpan.FromSeconds(1),
+              AutoReverse = true,
+              RepeatBehavior = RepeatBehavior.Forever,
+              BeginTime = TimeSpan.FromSeconds(delay)
+            };
+        
+            DoubleAnimation dotScaleAnim = new DoubleAnimation
+            {
+              From = 1.0,
+              To = 0.0,
+              Duration = TimeSpan.FromSeconds(1),
+              AutoReverse = true,
+              RepeatBehavior = RepeatBehavior.Forever,
+              BeginTime = TimeSpan.FromSeconds(delay)
+            };
+        
+            ScaleTransform circleScale = new ScaleTransform();
+            circle.RenderTransform = circleScale;
+            circle.RenderTransformOrigin = new Point(0.5, 0.5);
+            circleScale.BeginAnimation(ScaleTransform.ScaleXProperty, scaleAnim);
+            circleScale.BeginAnimation(ScaleTransform.ScaleYProperty, scaleAnim);
+            circle.BeginAnimation(UIElement.OpacityProperty, opacityAnim);
+        
+            ScaleTransform dotScale = new ScaleTransform();
+            dot.RenderTransform = dotScale;
+            dot.RenderTransformOrigin = new Point(0.5, 0.5);
+            dotScale.BeginAnimation(ScaleTransform.ScaleXProperty, dotScaleAnim);
+            dotScale.BeginAnimation(ScaleTransform.ScaleYProperty, dotScaleAnim);
+          }
     }
 }

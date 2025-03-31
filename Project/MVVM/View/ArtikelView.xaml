@@ -6,111 +6,137 @@
              xmlns:local="clr-namespace:Project.MVVM.View"
              mc:Ignorable="d"
              d:DesignHeight="550" d:DesignWidth="800">
-    <ScrollViewer VerticalScrollBarVisibility="Auto">
-        <StackPanel Margin="20" VerticalAlignment="Top">
+    <StackPanel>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Visibility="Visible" x:Name="Input">
+            <StackPanel Margin="20" VerticalAlignment="Top">
 
-            <!-- Name -->
-            <StackPanel Margin="0,10,0,0">
-                <Label Content="Name:" FontWeight="Bold" Foreground="#526D96" FontSize="16" />
-                <Border CornerRadius="10" BorderThickness="1" BorderBrush="Gray">
-                    <TextBox x:Name="NameTextBox" Background="Transparent" Padding="10" FontSize="14"
-                             BorderThickness="0" />
-                </Border>
-            </StackPanel>
+                <!-- Name -->
+                <StackPanel Margin="0,10,0,0">
+                    <Label Content="Name:" FontWeight="Bold" Foreground="#526D96" FontSize="16" />
+                    <Border CornerRadius="10" BorderThickness="1" BorderBrush="Gray">
+                        <TextBox x:Name="NameTextBox" Background="Transparent" Padding="10" FontSize="14"
+                                 BorderThickness="0" />
+                    </Border>
+                </StackPanel>
 
-            <!-- Description -->
-            <StackPanel Margin="0,10,0,0">
-                <Label Content="Description:" FontWeight="Bold" Foreground="#526D96" FontSize="16" />
-                <Border CornerRadius="10" BorderThickness="1" BorderBrush="Gray">
-                    <TextBox x:Name="DescriptionTextBox" Background="Transparent" Padding="10" FontSize="14"
-                             BorderThickness="0"
-                             AcceptsReturn="True" Height="80" TextWrapping="Wrap" />
-                </Border>
-            </StackPanel>
+                <!-- Description -->
+                <StackPanel Margin="0,10,0,0">
+                    <Label Content="Description:" FontWeight="Bold" Foreground="#526D96" FontSize="16" />
+                    <Border CornerRadius="10" BorderThickness="1" BorderBrush="Gray">
+                        <TextBox x:Name="DescriptionTextBox" Background="Transparent" Padding="10" FontSize="14"
+                                 BorderThickness="0"
+                                 AcceptsReturn="True" Height="80" TextWrapping="Wrap" />
+                    </Border>
+                </StackPanel>
 
-            <!-- Unit (ComboBox) -->
-            <StackPanel Margin="0,10,0,0">
-                <Label Content="Unit:" FontWeight="Bold" Foreground="#526D96" FontSize="16" />
-                <Border CornerRadius="10" BorderThickness="1" BorderBrush="Gray" Padding="5">
-                    <ComboBox x:Name="UnitComboBox" Padding="5" FontSize="14" BorderThickness="0"
-                              Background="Transparent" OverridesDefaultStyle="True">
-                        <ComboBox.Template>
-                            <ControlTemplate TargetType="ComboBox">
-                                <Grid>
-                                    <ToggleButton Name="ToggleButton"
-                                                  Background="Transparent"
-                                                  BorderBrush="Transparent"
-                                                  BorderThickness="0"
-                                                  Focusable="false"
-                                                  IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}">
-                                        <StackPanel Orientation="Horizontal" Width="700">
-                                            
-                                        <ContentPresenter x:Name="ContentSite"
-                                                          Content="{TemplateBinding SelectionBoxItem}"
-                                                          Margin="3,3,23,3"
-                                                          VerticalAlignment="Center"
-                                                          HorizontalAlignment="Left"  Width="665"/>
-                                        <Path x:Name="Arrow"
-                                              Fill="Black"
-                                              Data="M 0 0 L 4 4 L 8 0 Z"
-                                              HorizontalAlignment="Right"
-                                              Margin="0,0,8,0"
-                                              VerticalAlignment="Center" />
-                                        </StackPanel>
-                                    </ToggleButton>
-                                    <Popup Name="Popup"
-                                           Placement="Bottom"
-                                           IsOpen="{TemplateBinding IsDropDownOpen}"
-                                           AllowsTransparency="True"
-                                           Focusable="False"
-                                           PopupAnimation="Slide">
-                                        <Grid x:Name="DropDown"
-                                              SnapsToDevicePixels="True"
-                                              MinWidth="{TemplateBinding ActualWidth}"
-                                              MaxHeight="200">
-                                            <Border x:Name="DropDownBorder" Background="White" BorderThickness="1"
-                                                    BorderBrush="Gray" />
-                                            <ScrollViewer Margin="4,6,4,6" SnapsToDevicePixels="True">
-                                                <StackPanel IsItemsHost="True"
-                                                            KeyboardNavigation.DirectionalNavigation="Contained" />
-                                            </ScrollViewer>
-                                        </Grid>
-                                    </Popup>
-                                </Grid>
-                            </ControlTemplate>
-                        </ComboBox.Template>
-                        <ComboBoxItem Content="Kilogram" />
-                        <ComboBoxItem Content="Piece" />
-                        <ComboBoxItem Content="Liter" />
-                        <ComboBoxItem Content="Meter" />
-                    </ComboBox>
-                </Border>
-            </StackPanel>
+                <!-- Unit (ComboBox) -->
+                <StackPanel Margin="0,10,0,0">
+                    <Label Content="Unit:" FontWeight="Bold" Foreground="#526D96" FontSize="16" />
+                    <Border CornerRadius="10" BorderThickness="1" BorderBrush="Gray" Padding="5">
+                        <ComboBox x:Name="UnitComboBox" Padding="5" FontSize="14" BorderThickness="0"
+                                  Background="Transparent" OverridesDefaultStyle="True">
+                            <ComboBox.Template>
+                                <ControlTemplate TargetType="ComboBox">
+                                    <Grid>
+                                        <ToggleButton Name="ToggleButton"
+                                                      Background="Transparent"
+                                                      BorderBrush="Transparent"
+                                                      BorderThickness="0"
+                                                      Focusable="false"
+                                                      IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}">
+                                            <StackPanel Orientation="Horizontal" Width="700">
+
+                                                <ContentPresenter x:Name="ContentSite"
+                                                                  Content="{TemplateBinding SelectionBoxItem}"
+                                                                  Margin="3,3,23,3"
+                                                                  VerticalAlignment="Center"
+                                                                  HorizontalAlignment="Left" Width="665" />
+                                                <Path x:Name="Arrow"
+                                                      Fill="Black"
+                                                      Data="M 0 0 L 4 4 L 8 0 Z"
+                                                      HorizontalAlignment="Right"
+                                                      Margin="0,0,8,0"
+                                                      VerticalAlignment="Center" />
+                                            </StackPanel>
+                                        </ToggleButton>
+                                        <Popup Name="Popup"
+                                               Placement="Bottom"
+                                               IsOpen="{TemplateBinding IsDropDownOpen}"
+                                               AllowsTransparency="True"
+                                               Focusable="False"
+                                               PopupAnimation="Slide">
+                                            <Grid x:Name="DropDown"
+                                                  SnapsToDevicePixels="True"
+                                                  MinWidth="{TemplateBinding ActualWidth}"
+                                                  MaxHeight="200">
+                                                <Border x:Name="DropDownBorder" Background="White" BorderThickness="1"
+                                                        BorderBrush="Gray" />
+                                                <ScrollViewer Margin="4,6,4,6" SnapsToDevicePixels="True">
+                                                    <StackPanel IsItemsHost="True"
+                                                                KeyboardNavigation.DirectionalNavigation="Contained" />
+                                                </ScrollViewer>
+                                            </Grid>
+                                        </Popup>
+                                    </Grid>
+                                </ControlTemplate>
+                            </ComboBox.Template>
+                            <ComboBoxItem Content="Kilogram" />
+                            <ComboBoxItem Content="Piece" />
+                            <ComboBoxItem Content="Liter" />
+                            <ComboBoxItem Content="Meter" />
+                        </ComboBox>
+                    </Border>
+                </StackPanel>
 
 
-            <!-- Stock Quantity -->
-            <StackPanel Margin="0,10,0,0">
-                <Label Content="Stock Quantity:" FontWeight="Bold" Foreground="#526D96" FontSize="16" />
-                <Border CornerRadius="10" BorderThickness="1" BorderBrush="Gray">
-                    <TextBox x:Name="StockQuantityTextBox" Background="Transparent" Padding="10" FontSize="14"
-                             BorderThickness="0"
-                             PreviewTextInput="NumberValidationTextBox" />
-                    <!-- Hinweis: In deinem Code-behind muss die Methode 'NumberValidationTextBox' implementiert werden, 
+                <!-- Stock Quantity -->
+                <StackPanel Margin="0,10,0,0">
+                    <Label Content="Stock Quantity:" FontWeight="Bold" Foreground="#526D96" FontSize="16" />
+                    <Border CornerRadius="10" BorderThickness="1" BorderBrush="Gray">
+                        <TextBox x:Name="StockQuantityTextBox" Background="Transparent" Padding="10" FontSize="14"
+                                 BorderThickness="0"
+                                 PreviewTextInput="NumberValidationTextBox" />
+                        <!-- Hinweis: In deinem Code-behind muss die Methode 'NumberValidationTextBox' implementiert werden, 
                damit nur Zahlen eingegeben werden können. -->
-                </Border>
-            </StackPanel>
+                    </Border>
+                </StackPanel>
 
-            <!-- Submit Button -->
-            <Button Content="Add Item" Margin="0,20,0,0" Height="40" Background="#526D96" Foreground="White"
-                    FontWeight="Bold" BorderThickness="0" Cursor="Hand" Click="ButtonBase_OnClick">
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}" CornerRadius="8">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                        </Border>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
+                <!-- Submit Button -->
+                <Button Content="Add Item" Margin="0,20,0,0" Height="40" Background="#526D96" Foreground="White"
+                        FontWeight="Bold" BorderThickness="0" Cursor="Hand" Click="ButtonBase_OnClick">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}" CornerRadius="8">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </StackPanel>
+        </ScrollViewer>
+        <StackPanel>
+            <Grid x:Name="LoadingScreen" Visibility="Collapsed">
+                <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,192,0,0">
+                        <Grid Width="20" Height="20">
+                            <Ellipse Name="circle1" Width="20" Height="20" Stroke="LightGray" StrokeThickness="2"/>
+                            <Ellipse Name="dot1" Width="16" Height="16" Fill="LightGray"/>
+                        </Grid>
+                        <Grid Width="20" Height="20" Margin="10,0,0,0">
+                            <Ellipse Name="circle2" Width="20" Height="20" Stroke="LightGray" StrokeThickness="2"/>
+                            <Ellipse Name="dot2" Width="16" Height="16" Fill="LightGray"/>
+                        </Grid>
+                        <Grid Width="20" Height="20" Margin="10,0,0,0">
+                            <Ellipse Name="circle3" Width="20" Height="20" Stroke="LightGray" StrokeThickness="2"/>
+                            <Ellipse Name="dot3" Width="16" Height="16" Fill="LightGray"/>
+                        </Grid>
+                        <Grid Width="20" Height="20" Margin="10,0,0,0">
+                            <Ellipse Name="circle4" Width="20" Height="20" Stroke="LightGray" StrokeThickness="2"/>
+                            <Ellipse Name="dot4" Width="16" Height="16" Fill="LightGray"/>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+            </Grid>
         </StackPanel>
-    </ScrollViewer>
+    </StackPanel>
 </UserControl>
