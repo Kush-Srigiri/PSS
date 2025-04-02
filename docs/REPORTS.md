@@ -57,6 +57,9 @@
 - Wir haben den Ablaufschema grob gezeichnet
 - Die UI haben wir nochmals verfeinert und die response time ist jetzt sehr schnell.
 
+### 04.04.2025:
+[@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
+
 
 ### 07.04.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
