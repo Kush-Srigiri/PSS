@@ -53,6 +53,10 @@
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
 #### Description:
 
+- Zusammen haben wir weiter recherchiert was noch in ein Produktionssteuerungssystem gehören würde.
+- Wir haben den Ablaufschema grob gezeichnet
+- Die UI haben wir nochmals verfeinert und die response time ist jetzt sehr schnell.
+
 
 ### 07.04.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
