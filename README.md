@@ -15,7 +15,7 @@ Dieses Tool hilft dir dabei, Produktionsprozesse effizient zu steuern, zu überw
 - [Dokumentation](#-dokumentation)
 - [Mitwirkende](#-mitwirkende)
 - [Reports](#-reports)
-- [Community & Support](#-️-community--support)
+- [Community & Support](#-️-community--&--support)
 
 ---
 ## 📖 Dokumentation
