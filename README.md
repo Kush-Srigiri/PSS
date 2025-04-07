@@ -1,8 +1,8 @@
 # ⚙️ **PSS — ProduktionsSteuerungsSystem**
 
-![Build](https://img.shields.io/badge/build-passing-brightgreen)
+![Build](https://img.shields.io/badge/build-passing-darkgreen)
 ![License](https://img.shields.io/badge/license-MIT-blue)
-![Version](https://img.shields.io/badge/version-1.0.0-yellow)
+![Version](https://img.shields.io/badge/version-1.0.0-brightgreen)
 
 Willkommen bei **PSS**, deinem smarten Produktionssteuerungssystem!  
 Dieses Tool hilft dir dabei, Produktionsprozesse effizient zu steuern, zu überwachen und zu optimieren.  
