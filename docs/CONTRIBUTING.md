@@ -1,4 +1,4 @@
-## 👥 Contributors
+## 👥 Mitwirkende
 
 ### 1. Jamie Poeffel (Backend Developer) 
 **Contribution:** Optimized database queries for faster response times.  
