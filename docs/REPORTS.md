@@ -64,6 +64,9 @@
 ### 07.04.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
 #### Description:
+- Wir haben diskutiert was wir noch alles einfügen könnten.
+- Was jeder noch machen soll
+- Import hinzugefügt
 
 
 ### 14.04.2025:  
