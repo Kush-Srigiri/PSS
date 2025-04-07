@@ -15,7 +15,7 @@ Dieses Tool hilft dir dabei, Produktionsprozesse effizient zu steuern, zu überw
 - [Dokumentation](#-dokumentation)
 - [Mitwirkende](#-mitwirkende)
 - [Reports](#-reports)
-- [Community & Support](#-️-community--&--support)
+
 
 ---
 ## 📖 Dokumentation
@@ -48,18 +48,5 @@ Hier findest du Berichte über Entwicklungen, Fehleranalysen und Optimierungen:
 
 ---
 
-## ❤️ Community & Support
-
-Hast du Fragen, Vorschläge oder Probleme?  
-Zögere nicht, ein Issue zu eröffnen oder einen Pull Request einzureichen!
-
-> Gemeinsam verbessern wir PSS für alle! 🚀
-
----
-
-## 📌 Hinweis
-
-🛠️ Dieses System befindet sich in kontinuierlicher Weiterentwicklung.  
-📖 Bleib auf dem Laufenden und schau regelmäßig in die Dokumentation!
 
 
