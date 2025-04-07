@@ -12,3 +12,6 @@ namespace Project
     }
 
 }
+
+
+// Example of using the connection string from App.config
