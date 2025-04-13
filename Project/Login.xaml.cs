@@ -1,62 +1,47 @@
 ﻿using Project.objects;
 using Project.services;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using System.Xaml;
 
 namespace Project
 {
-    /// <summary>
-    /// Interaktionslogik für Login.xaml
-    /// </summary>
     public partial class Login : Window
     {
-        // Result of the login
         bool result = false;
-
-        // Service instans of Appdata
         AppDataSave_service appData = new();
-
-        // Database instance
         DB db;
-
-        // UserLoginData instance
         UserDataLogin udl;
 
-
-        /// <summary>
-        /// the Login Window when created needs db connection
-        /// </summary>
-        /// <param name="db">database connection</param>
         public Login(DB db)
         {
             this.db = db;
-            udl = new(db.Get("SELECT*FROM User")[0,1], db.Get("SELECT*FROM User")[0,2], false);
+            udl = new UserDataLogin(db.Get("SELECT * FROM User")[0, 1], db.Get("SELECT * FROM User")[0, 2], false);
             InitializeComponent();
             this.ShowInTaskbar = true;
             this.EmailTbx.Focus();
+
+            ThemeManager.ThemeChanged += ApplyTheme;
+            ApplyTheme();
+        }
+
+        private void ApplyTheme()
+        {
+            this.Resources["ForegroundBrush"] = ThemeManager.GetForegroundBrush();
+            this.Resources["AccentBrush"] = ThemeManager.GetAccentBrush();
         }
 
         private void Border_MouseEnter(object sender, MouseEventArgs e)
         {
-            this.IconX.Visibility = Visibility.Visible;
+            IconX.Visibility = Visibility.Visible;
         }
 
         private void Border_MouseLeave(object sender, MouseEventArgs e)
         {
-            this.IconX.Visibility = Visibility.Hidden;
+            IconX.Visibility = Visibility.Hidden;
         }
 
         private void Close_Click(object sender, MouseButtonEventArgs e)
@@ -64,28 +49,18 @@ namespace Project
             Application.Current.Shutdown();
         }
 
-        /// <summary>
-        /// Authentificates the User when it has the correct data saved in UserData
-        /// </summary>
-        /// <returns>When the use is Autheticatet return true else open the window to log the user in and if correct the true else false</returns>
         public bool Authentificate()
         {
             UserDataLogin obj = appData.LoadUserLoginData();
 
-            if (obj != null)
+            if (obj != null && obj.Email == udl.Email && obj.PasswordHash == udl.PasswordHash)
             {
-                Debug.WriteLine(obj.Email == udl.Email && obj.PasswordHash == udl.PasswordHash);
-                if (obj.Email == udl.Email && obj.PasswordHash == udl.PasswordHash)
-                {
-                    return true;
-                }
+                return true;
             }
 
             this.ShowDialog();
             return result;
         }
-
-
 
         private void Border_KeyDown(object sender, MouseEventArgs e)
         {
@@ -93,19 +68,10 @@ namespace Project
             LoginUser();
         }
 
-        private void setLoading(bool isloading)
+        private void setLoading(bool isLoading)
         {
-
-            if (isloading)
-            {
-                this.LoadingImg.Visibility = Visibility.Visible;
-                this.LoginBtnName.Visibility = Visibility.Collapsed;
-            }
-            else
-            {
-                this.LoginBtnName.Visibility = Visibility.Visible;
-                this.LoadingImg.Visibility = Visibility.Collapsed;
-            }
+            LoadingImg.Visibility = isLoading ? Visibility.Visible : Visibility.Collapsed;
+            LoginBtnName.Visibility = isLoading ? Visibility.Collapsed : Visibility.Visible;
         }
 
         private void LoginBtnName_KeyDown(object sender, MouseEventArgs e)
@@ -115,22 +81,20 @@ namespace Project
 
         private async void LoginUser()
         {
-            this.EmailErrorLbl.Visibility = Visibility.Hidden;
-            this.PasswordErrorLbl.Visibility = Visibility.Hidden;
+            EmailErrorLbl.Visibility = Visibility.Hidden;
+            PasswordErrorLbl.Visibility = Visibility.Hidden;
             setLoading(true);
 
-            string email = this.EmailTbx.Text.Trim().ToLower();
-            string password = this.PasswordTbx.Password;
+            string email = EmailTbx.Text.Trim().ToLower();
+            string password = PasswordTbx.Password;
 
             await Task.Delay(100);
 
             if (email == udl.Email && udl.ValidatePassword(password))
             {
-
                 await Task.Delay(1000);
 
                 setLoading(false);
-
                 result = true;
 
                 if (RememberMeCheckBox.IsChecked == true)
@@ -142,14 +106,12 @@ namespace Project
                 return;
             }
 
-
             await Task.Delay(500);
 
-            this.EmailTbx.Text = "";
-            this.EmailErrorLbl.Visibility = Visibility.Visible;
-            this.PasswordTbx.Password = "";
-            this.PasswordErrorLbl.Visibility = Visibility.Visible;
-
+            EmailTbx.Text = string.Empty;
+            EmailErrorLbl.Visibility = Visibility.Visible;
+            PasswordTbx.Password = string.Empty;
+            PasswordErrorLbl.Visibility = Visibility.Visible;
 
             setLoading(false);
         }

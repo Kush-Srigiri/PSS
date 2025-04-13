@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Project.MVVM.View;
 
 namespace Project.MVVM.ViewModel
 {
@@ -18,6 +19,10 @@ namespace Project.MVVM.ViewModel
 
         public RelayCommand SettingsViewCommand { get; set; }
         public SettingsViewModel SettingsViewModel { get; set; }
+        
+        
+        
+        
 
         private object _currentView;
         public object CurrentView
@@ -35,6 +40,7 @@ namespace Project.MVVM.ViewModel
             HomeViewModel = new HomeViewModel();
             ArtikelViewModel = new ArtikelViewModel();
             SettingsViewModel = new SettingsViewModel();
+            
 
             CurrentView = HomeViewModel;
 
@@ -47,6 +53,9 @@ namespace Project.MVVM.ViewModel
             {
                 CurrentView = ArtikelViewModel;
             });
+
+
+            
 
             SettingsViewCommand = new RelayCommand(o => 
             {
