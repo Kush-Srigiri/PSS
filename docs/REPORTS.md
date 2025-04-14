@@ -74,18 +74,6 @@
 #### Description:
 
 
-
-### 21.04.2025:  
-[@everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
-#### Description:
-
-
-
-### 28.04.2025:  
-[@everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
-#### Description:
-
-
 ### 05.05.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
 #### Description:
