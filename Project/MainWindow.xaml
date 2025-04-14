@@ -4,64 +4,67 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project"
-        mc:Ignorable="d"
         xmlns:viewModel="clr-namespace:Project.MVVM.ViewModel"
+        mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="1000"
         ResizeMode="NoResize"
         Background="Transparent"
         AllowsTransparency="True"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen">
+
   <Window.DataContext>
     <viewModel:MainViewModel/>
   </Window.DataContext>
 
-  <Border Background="#FEFBF3" CornerRadius="20" MouseDown="Border_MouseDown" BorderThickness="1" BorderBrush="Black">
+  <Border x:Name="MainBorder" Background="#FEFBF3" CornerRadius="20" MouseDown="Border_MouseDown" BorderThickness="1" BorderBrush="Black">
     <StackPanel>
+      <!-- Top Bar -->
       <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="16,0,0,0" Orientation="Horizontal"
-                        MouseEnter="Border_MouseEnter"
-                        MouseLeave="Border_MouseLeave" Width="500" AutomationProperties.IsOffscreenBehavior="Onscreen">
+                    MouseEnter="Border_MouseEnter"
+                    MouseLeave="Border_MouseLeave" Width="500">
           <Border x:Name="CloseButton"
-                        Background="#EF9587"
-                        CornerRadius="1000"
-                        Width="12"
-                        Height="12"
-                        Cursor="Hand"
-                        MouseLeftButtonDown="Close_Click">
-            <Image  Margin="2" Visibility="Hidden" x:Name="IconX" Source="/x.png" />
+                  Background="#EF9587"
+                  CornerRadius="1000"
+                  Width="12"
+                  Height="12"
+                  Cursor="Hand"
+                  MouseLeftButtonDown="Close_Click">
+            <Image Margin="2" Visibility="Hidden" x:Name="IconX" Source="/x.png" />
           </Border>
 
           <Border Width="6" Background="Transparent"/>
 
           <Border x:Name="MinimizeButton"
-                        Background="#FFD166"
-                        CornerRadius="1000"
-                        Width="12"
-                        Height="12"
-                        Cursor="Hand"
-                        MouseLeftButtonDown="Minimize_Click">
+                  Background="#FFD166"
+                  CornerRadius="1000"
+                  Width="12"
+                  Height="12"
+                  Cursor="Hand"
+                  MouseLeftButtonDown="Minimize_Click">
             <Image Source="/minus.png" Margin="2" Visibility="Hidden" x:Name="IconMinus" />
           </Border>
-
         </StackPanel>
+
+        <!-- Logout Button -->
         <StackPanel Width="490" HorizontalAlignment="Right" VerticalAlignment="Center">
           <Border Width="20" Height="20" CornerRadius="5" Background="LightGray" Padding="4"
-                    MouseDown="Button_Click" HorizontalAlignment="Right" Margin="0,0,25,0" Visibility="Visible" Cursor="Hand">
+                  MouseDown="Button_Click" HorizontalAlignment="Right" Margin="0,0,25,0" Cursor="Hand">
             <Image Source="/log-out.png"/>
           </Border>
         </StackPanel>
       </StackPanel>
+
+      <!-- Main Content Grid -->
       <Grid Margin="10,5,10,10" Height="550">
         <Grid.ColumnDefinitions>
           <ColumnDefinition Width="200"/>
           <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-          <RowDefinition/>
-        </Grid.RowDefinitions>
 
-        <StackPanel Grid.Column="0" Grid.Row="0">
+        <!-- Sidebar -->
+        <StackPanel Grid.Column="0">
           <Border BorderBrush="#D3D3D3" BorderThickness="0,0,1,0" Height="550">
             <Grid>
               <Grid.RowDefinitions>
@@ -71,37 +74,16 @@
                 <RowDefinition Height="Auto"/>
               </Grid.RowDefinitions>
 
-              <RadioButton 
-                Content="Home" 
-                Height="35" 
-                Style="{StaticResource MenuButtonTheme}" 
-                IsChecked="True" 
-                Command="{Binding HomeViewCommand}" 
-                Grid.Row="0"/>
-
-              <RadioButton 
-                Content="Artikel" 
-                Height="35" 
-                Style="{StaticResource MenuButtonTheme}" 
-                Command="{Binding ArtikelViewCommand}" 
-                Grid.Row="1"/>
-
-              <RadioButton 
-                Content="Settings" 
-                Height="35" 
-                Style="{StaticResource MenuButtonTheme}" 
-                Command="{Binding SettingsViewCommand}" 
-                Grid.Row="3"/>
+              <RadioButton Content="Home" Height="35" Style="{StaticResource MenuButtonTheme}" IsChecked="True" Command="{Binding HomeViewCommand}" Grid.Row="0"/>
+              <RadioButton Content="Artikel" Height="35" Style="{StaticResource MenuButtonTheme}" Command="{Binding ArtikelViewCommand}" Grid.Row="1"/>
+              <RadioButton Content="Settings" Height="35" Style="{StaticResource MenuButtonTheme}" Command="{Binding SettingsViewCommand}" Grid.Row="3"/>
             </Grid>
           </Border>
         </StackPanel>
 
-
-
-
-        <ContentControl Margin="5,0,0,0" Grid.Row="0" Grid.Column="1" Content="{Binding CurrentView}"/>
+        <!-- Content Display -->
+        <ContentControl Margin="5,0,0,0" Grid.Column="1" Content="{Binding CurrentView}"/>
       </Grid>
     </StackPanel>
   </Border>
-
 </Window>

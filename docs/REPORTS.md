@@ -64,24 +64,29 @@
 ### 07.04.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
 #### Description:
+- Wir haben diskutiert was wir noch alles einfügen könnten.
+- Was jeder noch machen soll
+- Import hinzugefügt
 
 
 ### 14.04.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
 #### Description:
-
+- Haben wir einen Mockup.md erstellt und Bilder hinzugefügt
+- Wir haben unser Figma/Mockup eingefügt im Github
+- Haben den UI verfeinert und verbessert
+- Artikel Objekt noch umgeschrieben
 
 
 ### 21.04.2025:  
-[@everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
+[@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
 #### Description:
-
-
+Holidays
 
 ### 28.04.2025:  
-[@everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
+[@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
 #### Description:
-
+Holidays
 
 ### 05.05.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  

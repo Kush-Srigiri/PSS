@@ -10,45 +10,53 @@
         AllowsTransparency="True"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen">
-    <Border Background="#FEFBF3" CornerRadius="20" BorderThickness="1" BorderBrush="Black" MouseDown="Border_MouseDown">
-        <StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
-                <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,-3,0,0"
-                            Orientation="Horizontal"
-                            MouseEnter="Border_MouseEnter"
-                            MouseLeave="Border_MouseLeave" AutomationProperties.IsOffscreenBehavior="Onscreen">
-                    <Border x:Name="CloseButton"
-                            Background="#EF9587"
-                            CornerRadius="1000"
-                            Width="12"
-                            Height="12"
-                            Cursor="Hand"
-                            MouseLeftButtonDown="Close_Click">
-                        <Image Margin="2" Visibility="Hidden" x:Name="IconX" Source="/x.png" />
-                    </Border>
-
-                </StackPanel>
-            </StackPanel>
-            <Grid Margin="10">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="70" />
-                    <RowDefinition Height="5" />
-                    <RowDefinition Height="30" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="180" />
-                    <ColumnDefinition Width="18" />
-                    <ColumnDefinition Width="180" />
-                </Grid.ColumnDefinitions>
-
-                <!-- Centered TextBlock spanning all columns -->
-                <TextBlock x:Name="Msg" Margin="4,8" FontSize="16" FontWeight="SemiBold" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" FontFamily="{StaticResource Roboto}" />
-
-                <!-- Buttons -->
-                <Button x:Name="PrimBtn" Grid.Row="2" Content="Ok" FontSize="14" FontWeight="SemiBold" Style="{StaticResource ButtonTheme}" Width="180" Height="30" Grid.Column="0" />
-                <Button x:Name="SecoBtn" Grid.Row="2" Content="Cancel" FontSize="14" FontWeight="SemiBold" Style="{StaticResource ButtonTheme}" Width="180" Height="30" Grid.Column="2"  />
-            </Grid>
-
+  <Border x:Name="MainBorder" Background="#FEFBF3" CornerRadius="20" BorderThickness="1" BorderBrush="Black" MouseDown="Border_MouseDown">
+    <StackPanel>
+      <!-- Close Button Area -->
+      <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,-3,0,0"
+                    Orientation="Horizontal"
+                    MouseEnter="Border_MouseEnter"
+                    MouseLeave="Border_MouseLeave">
+          <Border x:Name="CloseButton"
+                  Background="#EF9587"
+                  CornerRadius="1000"
+                  Width="12"
+                  Height="12"
+                  Cursor="Hand"
+                  MouseLeftButtonDown="Close_Click">
+            <Image Margin="2" Visibility="Hidden" x:Name="IconX" Source="/x.png" />
+          </Border>
         </StackPanel>
-    </Border>
+      </StackPanel>
+
+      <!-- Message and Buttons -->
+      <Grid Margin="10">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="70" />
+          <RowDefinition Height="5" />
+          <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="180" />
+          <ColumnDefinition Width="18" />
+          <ColumnDefinition Width="180" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Message Text -->
+        <TextBlock x:Name="Msg" Margin="4,8" FontSize="16" FontWeight="SemiBold"
+                   Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
+                   FontFamily="{StaticResource Roboto}"
+                   TextWrapping="Wrap"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center" />
+
+        <!-- Buttons -->
+        <Button x:Name="PrimBtn" Grid.Row="2" Content="Ok" FontSize="14" FontWeight="SemiBold"
+                Style="{StaticResource ButtonTheme}" Width="180" Height="30" Grid.Column="0" />
+        <Button x:Name="SecoBtn" Grid.Row="2" Content="Cancel" FontSize="14" FontWeight="SemiBold"
+                Style="{StaticResource ButtonTheme}" Width="180" Height="30" Grid.Column="2" />
+      </Grid>
+    </StackPanel>
+  </Border>
 </Window>
