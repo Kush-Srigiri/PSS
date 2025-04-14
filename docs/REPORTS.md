@@ -74,6 +74,16 @@
 #### Description:
 
 
+### 21.04.2025:  
+[@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
+#### Description:
+Holidays
+
+### 28.04.2025:  
+[@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
+#### Description:
+Holidays
+
 ### 05.05.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
 #### Description:
