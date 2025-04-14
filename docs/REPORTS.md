@@ -72,6 +72,10 @@
 ### 14.04.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
 #### Description:
+- Haben wir einen Mockup.md erstellt und Bilder hinzugefügt
+- Wir haben unser Figma/Mockup eingefügt im Github
+- Haben den UI verfeinert und verbessert
+- Artikel Objekt noch umgeschrieben
 
 
 ### 21.04.2025:  
