@@ -1,6 +1,6 @@
-# ⚙️ **PSS — ProduktionsSteuerungsSystem**
+# ⚙️ **PSS — Produktions Steuerungs System**
 
-![Build](https://img.shields.io/badge/build-passing-darkgreen)
+![Tests](https://github.com/Kush-Srigiri/PSS/actions/workflows/dotnet-test.yml/badge.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 ![Version](https://img.shields.io/badge/version-1.0.0-brightgreen)
 
