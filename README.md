@@ -15,9 +15,10 @@ Dieses Tool hilft dir dabei, Produktionsprozesse effizient zu steuern, zu überw
 - [Dokumentation](#-dokumentation)
 - [Mitwirkende](#-mitwirkende)
 - [Reports](#-reports)
-
+- [Mockups](#-mockups)
 
 ---
+
 ## 📖 Dokumentation
 
 Hier findest du alles, was du brauchst, um PSS zu verstehen und optimal zu nutzen:
@@ -25,6 +26,7 @@ Hier findest du alles, was du brauchst, um PSS zu verstehen und optimal zu nutze
 👉 [**Zur Dokumentation**](docs/README.md)
 
 ### Inhalte:
+
 - 🚀 **Schnellstart-Anleitung**
 - 🛠️ **Konfigurationsoptionen**
 - 📊 **Integration in bestehende Systeme**
@@ -34,7 +36,7 @@ Hier findest du alles, was du brauchst, um PSS zu verstehen und optimal zu nutze
 
 ## 👥 Mitwirkende
 
-Großen Dank an alle, die an diesem Projekt arbeiten und es stetig verbessern! 🎉
+Grossen Dank an alle, die an diesem Projekt arbeiten und es stetig verbessern! 🎉
 
 👉 [**Liste der Mitwirkenden**](docs/CONTRIBUTING.md)
 
@@ -48,5 +50,10 @@ Hier findest du Berichte über Entwicklungen, Fehleranalysen und Optimierungen:
 
 ---
 
+## 📃 Mockups
 
+Hier findest du alle Mockups der Webseite, bevor wir mit der Entwicklung begonnen haben:
 
+👉 [**Zu den Mockups**](docs/MOCKUPS.md)
+
+---
