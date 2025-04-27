@@ -15,3 +15,6 @@
 **Contribution:** Created an ER-Diagramm for better visibility
 - Improved planning for better Time Managemente and Visualization
  
+<a href="https://github.com/kush-srigiri/pss/graphs/contributors">
+  <img src="https://contrib.rocks/image?&columns=25&max=10000&&repo=kush-srigiri/pss" noZoom />
+</a>
