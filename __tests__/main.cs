@@ -1,3 +1,4 @@
+using Project.objects;
 using Project.objects.Items;
 using Project.scripts;
 using Project.services;
@@ -30,5 +31,15 @@ public class main
         var decrypted = crt.Decrypt(encrypted);
         
         Assert.AreEqual(testData, decrypted);
+    }
+    [TestMethod]
+    public void Artikel_test()
+    {
+        var a = new Artikel( "Stift", "blau", "Stück", 10, false);
+        
+        Assert.AreEqual("Stift", a.name);
+        Assert.AreEqual("blau", a.description);
+        Assert.AreEqual("Stück", a.unit);
+        Assert.AreEqual(10, a.StockQuantity);
     }
 }
