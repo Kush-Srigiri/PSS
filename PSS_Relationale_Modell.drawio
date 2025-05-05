@@ -1,0 +1,43 @@
+<mxfile host="65bd71144e">
+    <diagram name="ER Diagram" id="dy5bgZy0JGvghACp0E9j">
+        <mxGraphModel dx="725" dy="702" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="zja4Fb652B_16tCy8yna-1" value="Artikel" style="swimlane" parent="1" vertex="1">
+                    <mxGeometry x="100" y="100" width="200" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="zja4Fb652B_16tCy8yna-2" value="id (PK)  |  int" parent="zja4Fb652B_16tCy8yna-1" vertex="1">
+                    <mxGeometry y="30" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="zja4Fb652B_16tCy8yna-3" value="name  |  varchar(120)" parent="zja4Fb652B_16tCy8yna-1" vertex="1">
+                    <mxGeometry y="60" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="zja4Fb652B_16tCy8yna-4" value="description  |  Text" parent="zja4Fb652B_16tCy8yna-1" vertex="1">
+                    <mxGeometry y="90" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="zja4Fb652B_16tCy8yna-5" value="unit  |  varchar(30)" parent="zja4Fb652B_16tCy8yna-1" vertex="1">
+                    <mxGeometry y="120" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="zja4Fb652B_16tCy8yna-6" value="StockQuantity  |  int" parent="zja4Fb652B_16tCy8yna-1" vertex="1">
+                    <mxGeometry y="150" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="zja4Fb652B_16tCy8yna-7" value="User" style="swimlane" parent="1" vertex="1">
+                    <mxGeometry x="400" y="100" width="200" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="id (PK)  | int (always 1)" vertex="1" parent="zja4Fb652B_16tCy8yna-7">
+                    <mxGeometry y="30" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="zja4Fb652B_16tCy8yna-8" value="Email  |  varchar(255)" parent="zja4Fb652B_16tCy8yna-7" vertex="1">
+                    <mxGeometry y="60" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="CreationDate  |  Datetime" vertex="1" parent="1">
+                    <mxGeometry x="100" y="280" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="zja4Fb652B_16tCy8yna-9" value="PasswordHash  |  varchar(255)" parent="1" vertex="1">
+                    <mxGeometry x="400" y="190" width="200" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
