@@ -10,79 +10,86 @@
     <UserControl.Resources>
         <ResourceDictionary Source="../../assets/Themes/ListItem.xaml" />
     </UserControl.Resources>
+    
     <UserControl.DataContext>
-        <viewModel:HomeViewModel/>
+        <viewModel:HomeViewModel />
     </UserControl.DataContext>
 
-       <ScrollViewer VerticalScrollBarVisibility="Auto">
-  <ScrollViewer.Resources>
-    <!-- Modern Thumb Style with rounded corners -->
-    <Style x:Key="ModernThumbStyle" TargetType="Thumb">
-      <Setter Property="Background" Value="LightGray"/>
-      <Setter Property="Width" Value="12"/> 
-      <Setter Property="Template">
-        <Setter.Value>
-          <ControlTemplate TargetType="Thumb">
-            <Border Background="{TemplateBinding Background}" 
-                    CornerRadius="8" 
-                    SnapsToDevicePixels="True"/>
-          </ControlTemplate>
-        </Setter.Value>
-      </Setter>
-    </Style>
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <ScrollViewer.Resources>
+            <Style x:Key="ModernThumbStyle" TargetType="Thumb">
+                <Setter Property="Background" Value="LightGray" />
+                <Setter Property="Width" Value="12" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Thumb">
+                            <Border Background="{TemplateBinding Background}"
+                                    CornerRadius="8"
+                                    SnapsToDevicePixels="True"/>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
 
-    <!-- Hide the repeat buttons (optional) -->
-    <Style x:Key="ScrollBarButtonStyle" TargetType="RepeatButton">
-      <Setter Property="Template">
-        <Setter.Value>
-          <ControlTemplate TargetType="RepeatButton">
-            <Grid Visibility="Collapsed"/>
-          </ControlTemplate>
-        </Setter.Value>
-      </Setter>
-    </Style>
+            <Style x:Key="ScrollBarButtonStyle" TargetType="RepeatButton">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="RepeatButton">
+                            <Grid Visibility="Collapsed"/>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
 
-    <!-- Style for all ScrollBars in this scope -->
-    <Style TargetType="ScrollBar">
-      <Setter Property="Background" Value="Transparent"/>
-      <Setter Property="Width" Value="5"/>
-      <Setter Property="Foreground" Value="Gray"/>
-      <Setter Property="Template">
-        <Setter.Value>
-          <ControlTemplate TargetType="ScrollBar">
-            <Grid Background="{TemplateBinding Background}">
-              <Track x:Name="PART_Track" IsDirectionReversed="True">
-                <Track.DecreaseRepeatButton>
-                  <RepeatButton Command="ScrollBar.LineUpCommand" 
-                                Style="{StaticResource ScrollBarButtonStyle}"
-                                IsTabStop="False"/>
-                </Track.DecreaseRepeatButton>
-                <Track.Thumb>
-                  <Thumb Style="{StaticResource ModernThumbStyle}" />
-                </Track.Thumb>
-                <Track.IncreaseRepeatButton>
-                  <RepeatButton Command="ScrollBar.LineDownCommand" 
-                                Style="{StaticResource ScrollBarButtonStyle}"
-                                IsTabStop="False"/>
-                </Track.IncreaseRepeatButton>
-              </Track>
-            </Grid>
-          </ControlTemplate>
-        </Setter.Value>
-      </Setter>
-    </Style>
-  </ScrollViewer.Resources>
+            <Style TargetType="ScrollBar">
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="Width" Value="5"/>
+                <Setter Property="Foreground" Value="Gray"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="ScrollBar">
+                            <Grid Background="{TemplateBinding Background}">
+                                <Track x:Name="PART_Track" IsDirectionReversed="True">
+                                    <Track.DecreaseRepeatButton>
+                                        <RepeatButton Command="ScrollBar.LineUpCommand"
+                                                      Style="{StaticResource ScrollBarButtonStyle}"
+                                                      IsTabStop="False"/>
+                                    </Track.DecreaseRepeatButton>
+                                    <Track.Thumb>
+                                        <Thumb Style="{StaticResource ModernThumbStyle}" />
+                                    </Track.Thumb>
+                                    <Track.IncreaseRepeatButton>
+                                        <RepeatButton Command="ScrollBar.LineDownCommand"
+                                                      Style="{StaticResource ScrollBarButtonStyle}"
+                                                      IsTabStop="False"/>
+                                    </Track.IncreaseRepeatButton>
+                                </Track>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ScrollViewer.Resources>
 
-  <!-- Your ItemsControl remains unchanged -->
-  <ItemsControl ItemsSource="{Binding Entries}">
-    <ItemsControl.ItemTemplate>
-      <DataTemplate>
-        <Border Style="{StaticResource ListViewItemBorderStyle}">
-          <TextBlock Text="{Binding title}" />
-        </Border>
-      </DataTemplate>
-    </ItemsControl.ItemTemplate>
-  </ItemsControl>
-</ScrollViewer>
+        <!-- Layout -->
+        <StackPanel Margin="20,10,20,20">
+            <!-- Title -->
+            <TextBlock Text="ProduktionsSteuerungssystem (PSS)"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,20"/>
 
+            <!-- Article List -->
+            <ItemsControl ItemsSource="{Binding Entries}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Style="{StaticResource ListViewItemBorderStyle}" Margin="0,5">
+                            <TextBlock Text="{Binding title}" />
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+    </ScrollViewer>
 </UserControl>
