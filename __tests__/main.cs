@@ -42,4 +42,14 @@ public class main
         Assert.AreEqual("Stück", a.unit);
         Assert.AreEqual(10, a.StockQuantity);
     }
+    
+    [TestMethod]
+    public void User_Test()
+    {
+        var user = new UserDataLogin("Max", "Password", true);
+
+        Assert.AreEqual("Max", user.Email);
+        Assert.IsTrue(user.ValidatePassword("Password"));
+    }
+
 }
