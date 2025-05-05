@@ -31,7 +31,7 @@ public class Artikel : IArtikel
 	            Create table Artikel
 	                (
 	                    id            INTEGER PRIMARY KEY AUTOINCREMENT,
-	                    name          VARCHAR(255),
+	                    name          VARCHAR(120),
 	                    description   TEXT,
 	                    unit          VARCHAR(30) NOT NULL, 
 	                    StockQuantity INT NOT NULL, 
