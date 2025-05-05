@@ -74,7 +74,7 @@
         <!-- Layout -->
         <StackPanel Margin="20,10,20,20">
             <!-- Title -->
-            <TextBlock Text="ProduktionsSteuerungssystem (PSS)"
+            <TextBlock Text="ProduktionsSteuerungsSystem"
                        FontSize="24"
                        FontWeight="Bold"
                        HorizontalAlignment="Center"
