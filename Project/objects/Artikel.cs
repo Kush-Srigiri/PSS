@@ -2,7 +2,7 @@ using Project.services;
 
 namespace Project.objects;
 
-public class Artikel
+public class Artikel : IArtikel
 {
     private DB _db;
 
