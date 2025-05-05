@@ -12,10 +12,10 @@ namespace Project.objects
 {
 
 
-    public class UserDataLogin
+    public class UserDataLogin : IUserDataLogin
     {
-        public string Email { get; set; }
-        public string PasswordHash { get; set; }
+        public string Email { get; private set; }
+        public string PasswordHash { get; private set; }
 
         [JsonConstructor] 
         public UserDataLogin(string Email, string Password)

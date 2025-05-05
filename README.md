@@ -52,7 +52,7 @@ Hier findest du Berichte über Entwicklungen, Fehleranalysen und Optimierungen:
 
 ## 📃 Mockups
 
-Hier findest du alle Mockups der Webseite, bevor wir mit der Entwicklung begonnen haben:
+Hier findest du alle Mockups der App, bevor wir mit der Entwicklung begonnen haben:
 
 👉 [**Zu den Mockups**](docs/MOCKUPS.md)
 

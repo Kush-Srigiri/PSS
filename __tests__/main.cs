@@ -10,10 +10,12 @@ public class main
     [TestMethod]
     public void ArtikelListItemTest()
     {
+		var expected = "TestArtikel";
+    	
         var item = new ArtikelListItem("TestArtikel");
         
         Assert.IsNotNull(item);
-        Assert.AreSame(item.title, "TestArtikel");
+        Assert.AreSame(item.title, expected);
     }
 
     [TestMethod]

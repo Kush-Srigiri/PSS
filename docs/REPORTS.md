@@ -20,12 +20,12 @@
 ### 24.02.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
 #### Description:
-- Holidays
+- Ferien
 
 ### 03.03.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
 #### Description:
-- Holidays
+- Ferien
 
 ### 10.03.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
@@ -72,21 +72,28 @@
 ### 14.04.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
 #### Description:
+- Haben wir einen Mockup.md erstellt und Bilder hinzugefügt
+- Wir haben unser Figma/Mockup eingefügt im Github
+- Haben den UI verfeinert und verbessert
+- Artikel Objekt noch umgeschrieben
 
 
 ### 21.04.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
 #### Description:
-Holidays
+Ferien
 
 ### 28.04.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
 #### Description:
-Holidays
+Ferien
 
 ### 05.05.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
 #### Description:
+- Haben wir mit die Interfaces angefangen.
+- Erstellten noch mehr Test beispiele
+- HomeView verbessert 
 
 
 ### 12.05.2025:  
