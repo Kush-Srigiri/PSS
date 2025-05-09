@@ -169,7 +169,7 @@ See [`LICENSE`](LICENSE) for details.
 
 ## 📬 Contact
 **Kush Srigiri** – *maintainer* 
-**Jamie Poeffel** – *Contributor* 
+[**@Jamie Poeffel**](https://github.com/Jamie-Poeffel) – *Contributor* 
 **Alessio Huber** – *Contributor* 
 GitHub: [@Kush‑Srigiri](https://github.com/Kush-Srigiri) 
 
