@@ -123,7 +123,7 @@ The pipeline runs **unit + integration tests** on every PR via GitHub Acti
 
 ## Documentation
 Full end‑user & developer docs live under **`/docs`** and are auto‑deployed to GitHub Pages at  
-<https://kush-srigiri.github.io/PSS/>.
+<https://github.com/Kush-Srigiri/PSS/>.
 
 ---
 
