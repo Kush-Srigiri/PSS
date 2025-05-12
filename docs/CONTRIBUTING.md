@@ -11,7 +11,7 @@
 - Improved layout with better padding and font sizes for a good UI/UX flow.  
 - Refactored Styles for better maintainability.
 
-### 3. Alessio Huber (Mockup Ceator)  
+### 3. Alessio Huber (Mockup Creator)  
 **Contribution:** Created an ER-Diagramm for better visibility
 - Improved planning for better Time Managemente and Visualization
 
