@@ -20,12 +20,12 @@
 ### 24.02.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
 #### Description:
-- Ferien
+- Vacation
 
 ### 03.03.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
 #### Description:
-- Ferien
+- Vacation
 
 ### 10.03.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
@@ -59,6 +59,9 @@
 ### 04.04.2025:
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
 ### Descripton: 
+- We searched for new ideas what to implement in the project
+- We refined the code made it look better
+- added Documents
 
 ### 07.04.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
@@ -80,12 +83,12 @@
 ### 21.04.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
 #### Description:
-Ferien
+Vacation
 
 ### 28.04.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
 #### Description:
-Ferien
+Vacation
 
 ### 05.05.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
@@ -101,6 +104,7 @@ Ferien
 - We have refined and improved the documentation
 - Implemented the import feature
 - Tested and fixed all test files
+- Added a Description
 
 ### 19.05.2025:  
 [Everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
