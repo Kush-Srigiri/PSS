@@ -90,17 +90,17 @@ Ferien
 ### 05.05.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
 #### Description:
-- Haben wir mit die Interfaces angefangen.
-- Erstellten noch mehr Test beispiele
-- HomeView verbessert 
+- We started with the interfaces.
+- Created even more test examples
+- Improved HomeView
 
 
 ### 12.05.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
 #### Description:
-- Haben wir die Dokumentation verfeinert und verbessert
-- Haben wir das Import feature implementiert
-- Haben wir alle Test Dateien probiert und fixiert
+- We have refined and improved the documentation
+- Implemented the import feature
+- Tested and fixed all test files
 
 ### 19.05.2025:  
 [Everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
