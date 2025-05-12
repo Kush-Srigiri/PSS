@@ -44,6 +44,12 @@ public class Artikel : IArtikel
 		}
     }
 
+    public Artikel(string name, string description, string unit, int StockQuantity, string CreationDate,
+	    bool insert = true) : this(name, description, unit, StockQuantity, insert)
+    {
+	    this.timestamp = Convert.ToDateTime(CreationDate);
+    }
+
 
     public void Update(Artikel artikel)
     {

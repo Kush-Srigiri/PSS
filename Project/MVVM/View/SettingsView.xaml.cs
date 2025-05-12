@@ -82,8 +82,9 @@ namespace Project.MVVM.View
                         string description = recordDict["description"]?.ToString();
                         string unit = recordDict["unit"]?.ToString();
                         int StockQuantity = Convert.ToInt32(recordDict["stockquantity"]);
+                        string CreationDate = recordDict["creationdate"]?.ToString();
 
-                        Artikel artikel = new Artikel(name, description, unit, StockQuantity);
+                        Artikel artikel = new Artikel(name, description, unit, StockQuantity, CreationDate);
                     }
                 }
             }
@@ -91,92 +92,42 @@ namespace Project.MVVM.View
 
         private async void Export(object sender, RoutedEventArgs e)
         {
-            MSGBox msgBox = new MSGBox("Export as Json/csv", "Json", "csv");
-            msgBox.ShowDialog();
-            if (msgBox.DialogResult == false)
+            SaveFileDialog saveFileDialog = new SaveFileDialog
             {
-                SaveFileDialog saveFileDialog = new SaveFileDialog
+                Title = "Save Your File",
+                Filter = "CSV Files (*.csv)|*.csv", 
+                FileName = "Export",
+                DefaultExt = "csv", 
+                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
+            };
+            saveFileDialog.ShowDialog();
+
+            string filepath = saveFileDialog.FileName;
+            string filename = saveFileDialog.SafeFileName;
+
+            if (DB.Instance.TableExists("Artikel"))
+            {
+                string[,] entries = DB.Instance.Get("SELECT * FROM Artikel");
+
+                int rows = entries.GetLength(0);
+                int cols = entries.GetLength(1);
+
+                string val = "id,name,description,unit,StockQuantity,timestamp\n";
+
+                for (int i = 0; i < rows; i++)
                 {
-                    Title = "Save Your File",
-                    Filter = "CSV Files (*.csv)|*.csv", // Removed extra space after '|'
-                    FileName = "Export",
-                    DefaultExt = "csv", // No dot needed
-                    InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
-                };
-                saveFileDialog.ShowDialog();   
-
-                string filepath = saveFileDialog.FileName;
-                string filename = saveFileDialog.SafeFileName;
-
-                if (DB.Instance.TableExists("Artikel"))
-                {
-                    string[,] entries = DB.Instance.Get("SELECT * FROM Artikel");
-
-                    int rows = entries.GetLength(0);
-                    int cols = entries.GetLength(1);
-
-                    string val = "id,name,description,unit,StockQuantity,timestamp\n";
-
-                    for (int i = 0; i < rows; i++)
+                    for (int j = 0; j < cols; j++)
                     {
-                        for (int j = 0; j < cols; j++)
-                        {
-                            if (j == cols - 1)
-                                val += entries[i, j];
-                            else
-                                val += entries[i, j] + ",";
-                        }
-
-                        val += "\n";
+                        if (j == cols - 1)
+                            val += entries[i, j];
+                        else
+                            val += entries[i, j] + ",";
                     }
 
-                    File.WriteAllText(filepath, val);
+                    val += "\n";
                 }
-            }
-            else
-            {
-                SaveFileDialog saveFileDialog = new SaveFileDialog
-                {
-                    Title = "Save Your File",
-                    Filter = "JSON Files (*.json)|*.json",
-                    FileName = "Export",
-                    DefaultExt = "json",
-                    InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
-                };
 
-                saveFileDialog.ShowDialog();   
-
-                string filepath = saveFileDialog.FileName;
-                string filename = saveFileDialog.SafeFileName;
-
-                if (DB.Instance.TableExists("Artikel"))
-                {
-                    string[,] entries = DB.Instance.Get("SELECT * FROM Artikel");
-
-                    int rows = entries.GetLength(0);
-                    int cols = entries.GetLength(1);
-
-                    var dataList =
-                        new System.Collections.Generic.List<System.Collections.Generic.Dictionary<string, string>>();
-
-                    for (int i = 0; i < rows; i++)
-                    {
-                        var rowDict = new System.Collections.Generic.Dictionary<string, string>();
-                        rowDict["id"] = entries[i, 0];
-                        rowDict["name"] = entries[i, 1];
-                        rowDict["description"] = entries[i, 2];
-                        rowDict["unit"] = entries[i, 3];
-                        rowDict["StockQuantity"] = entries[i, 4];
-                        rowDict["timestamp"] = entries[i, 5];
-
-                        dataList.Add(rowDict);
-                    }
-
-                    string json = System.Text.Json.JsonSerializer.Serialize(dataList,
-                        new System.Text.Json.JsonSerializerOptions { WriteIndented = true });
-
-                    File.WriteAllText(filepath, json);
-                }
+                File.WriteAllText(filepath, val);
             }
         }
     }
