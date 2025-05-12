@@ -63,18 +63,18 @@
 ### 07.04.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
 #### Description:
-- Wir haben diskutiert was wir noch alles einfügen könnten.
-- Was jeder noch machen soll
-- Import hinzugefügt
+- We discussed what else we could add.
+- What everyone should still do
+- Added Import
 
 
 ### 14.04.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
 #### Description:
-- Haben wir einen Mockup.md erstellt und Bilder hinzugefügt
-- Wir haben unser Figma/Mockup eingefügt im Github
-- Haben den UI verfeinert und verbessert
-- Artikel Objekt noch umgeschrieben
+- We have created a mockup.md and added pictures
+- We added our figma/mockup to the github
+- Refined and improved the UI
+- Article object still rewritten
 
 
 ### 21.04.2025:  
