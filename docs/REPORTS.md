@@ -99,7 +99,9 @@ Ferien
 ### 12.05.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
 #### Description:
-
+- Haben wir die Dokumentation verfeinert und verbessert
+- Haben wir das Import feature implementiert
+- Haben wir alle Test Dateien probiert und fixiert
 
 ### 19.05.2025:  
 [Everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
