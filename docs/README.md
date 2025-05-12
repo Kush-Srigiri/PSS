@@ -18,10 +18,10 @@
 ## 📑 Table of Contents
 1. [Features](#features)
 2. [Architecture](#architecture)
-3. [Tech Stack](#tech-stack)
-4. [Quick Start](#quick-start)
-5. [Database Model](#database-model)
-6. [Relational Model](#relational-model)
+3. [Tech Stack](#techstack)
+4. [Quick Start](#quickstart)
+5. [Database Model](#databasemodel)
+6. [Relational Model](#relationalmodel)
 7. [Testing](#testing)
 8. [Documentation](#documentation)
 9. [Roadmap](#roadmap)
@@ -30,9 +30,10 @@
 12. [License](#license)
 13. [Contact](#contact)
 
+
 ---
 
-## Features ✨
+## Features
 - **Order & Job Scheduling** – GANTT‑based finite‑capacity planning  
 - **Live Shop‑Floor Monitoring** – real‑time KPIs, OEE dashboards  
 - **Adaptive Alerts** – rule‑based notifications for deviations  
@@ -43,7 +44,7 @@
 
 ---
 
-## Architecture 🏗️
+## Architecture 
 
 <div style="display: flex; justify-content: center; gap: 40px;">
   <div style="text-align: center;">
@@ -66,7 +67,7 @@
 
 ---
 
-## Tech Stack🛠️
+## Tech Stack
 | Layer | Technology |
 |-------|------------|
 | Language | **C# 12**, .NET 8 LTS |
@@ -76,7 +77,7 @@
 
 ---
 
-## Quick Start 🚀 
+## Quick Start 
 ```bash
 # 1 Clone
 git clone https://github.com/Kush-Srigiri/PSS.git
@@ -90,7 +91,7 @@ dotnet run
 ---
 
 
-## Database Model 🗄️ 
+## Database Model 
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/Kush-Srigiri/PSS/main/PSS_ER_Modell.png" alt="ER Diagramm">
@@ -101,7 +102,7 @@ dotnet run
 
 ---
 
-## Relational Model 🗄️ 
+## Relational Model
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/Kush-Srigiri/PSS/main/PSS_Relationale_Modell.png" alt="Relational Model">
@@ -112,7 +113,7 @@ dotnet run
 
 ---
 
-## Testing ✔️ 
+## Testing 
 ```bash
 dotnet test
 ```
@@ -120,13 +121,13 @@ The pipeline runs **unit + integration tests** on every PR via GitHub Acti
 
 ---
 
-## Documentation 📚 
+## Documentation
 Full end‑user & developer docs live under **`/docs`** and are auto‑deployed to GitHub Pages at  
 <https://kush-srigiri.github.io/PSS/>.
 
 ---
 
-## Roadmap 🛤️ 
+## Roadmap
 - [ ] OPC UA driver for direct PLC connectivity  
 - [ ] Mobile‑first responsive UI  
 - [ ] AI‑assisted schedule optimisation (Genetic Algorithm)  
@@ -134,7 +135,7 @@ Full end‑user & developer docs live under **`/docs`** and are auto‑deployed 
 
 ---
 
-## Contributing 🤝 
+## Contributing
 1. Fork → Feature Branch → PR  
 2. Follow the **Conventional Commits** spec.  
 3. Run `dotnet format` before pushing.  
@@ -148,18 +149,18 @@ Please read [`CONTRIBUTING.md`](CONTRIBUTING.md) for the full guide.
 
 ---
 
-## Security 🛡️ 
+## Security
 If you discover a vulnerability, please review [`SECURITY.md`](SECURITY.md) and **responsibly disclose** it via the e‑mail listed there.
 
 ---
 
-## License 📄 
+## License
 Distributed under the **MIT License**.  
 See [`LICENSE`](LICENSE) for details.
 
 ---
 
-## Contact 📬 
+## Contact
 [**@Kush Srigiri**](https://github.com/Kush-Srigiri) – *maintainer* 
 [**@Jamie Poeffel**](https://github.com/Jamie-Poeffel) – *maintainer* 
 [**@Alessio Huber**](https://github.com/Alessio-Huber) – *Contributor* 
