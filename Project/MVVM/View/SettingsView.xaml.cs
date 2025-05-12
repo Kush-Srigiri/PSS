@@ -2,10 +2,13 @@
 using Project.Settings;
 using System.Configuration;
 using System.Diagnostics;
+using System.Globalization;
 using System.Windows;
 using System.Windows.Controls;
 using Microsoft.VisualBasic;
 using System.IO;
+using CsvHelper;
+using Project.objects;
 using Project.services;
 
 namespace Project.MVVM.View
@@ -61,11 +64,28 @@ namespace Project.MVVM.View
             openFileDialog.Filter = "CSV files (*.csv)|*.csv";
             openFileDialog.Title = "Select a CSV File";
 
-            string path;
+            string path = "";
 
             if (openFileDialog.ShowDialog() == true)
             {
                 path = openFileDialog.FileName;
+
+                using (var reader = new StreamReader(path))
+                using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+                {
+                    var records = csv.GetRecords<dynamic>();
+                    foreach (var record in records)
+                    {
+                        var recordDict = (IDictionary<string, object>)record;
+
+                        string name = recordDict["name"]?.ToString();
+                        string description = recordDict["description"]?.ToString();
+                        string unit = recordDict["unit"]?.ToString();
+                        int StockQuantity = Convert.ToInt32(recordDict["stockquantity"]);
+
+                        Artikel artikel = new Artikel(name, description, unit, StockQuantity);
+                    }
+                }
             }
         }
 

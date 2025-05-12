@@ -72,7 +72,7 @@
         </ScrollViewer.Resources>
 
         <!-- Layout -->
-        <StackPanel Margin="20,10,20,20">
+        <StackPanel Margin="20,10,0,20">
             <!-- Title -->
             <TextBlock Text="Products"
                        FontSize="24"
@@ -84,7 +84,7 @@
             <ItemsControl ItemsSource="{Binding Entries}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <Border Style="{StaticResource ListViewItemBorderStyle}" Margin="0,5">
+                        <Border Style="{StaticResource ListViewItemBorderStyle}" Margin="0,5 ">
                             <TextBlock Text="{Binding title}" />
                         </Border>
                     </DataTemplate>

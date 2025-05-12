@@ -15,7 +15,7 @@ public class Artikel : IArtikel
     public DateTime timestamp { get; private set; }
 
 
-    public Artikel(string name, string description, string unit, int StockQuantity, bool insert)
+    public Artikel(string name, string description, string unit, int StockQuantity, bool insert = true)
     {
         this.name = name;
         this.description = description;
@@ -39,6 +39,8 @@ public class Artikel : IArtikel
 	                )
 	            ");
 	        }
+	        
+	        _db.Execute($"INSERT INTO Artikel(name, description, unit, StockQuantity) VALUES ('{name}', '{description}', '{unit}', '{StockQuantity}')");
 		}
     }
 
