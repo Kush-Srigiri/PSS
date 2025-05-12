@@ -20,8 +20,8 @@
 2. [Architecture](#architecture)
 3. [Tech Stack](#tech-stack)
 4. [Quick Start](#quick-start)
-5. [Configuration](#configuration)
-6. [Database Model](#database-model)
+5. [Database Model](#database-model)
+6. [Relational Model](#relational-model)
 7. [Testing](#testing)
 8. [Documentation](#documentation)
 9. [Roadmap](#roadmap)
@@ -44,23 +44,25 @@
 ---
 
 ## 🏗️ Architecture
-```mermaid
-flowchart LR
-    UI[Web / Desktop Clients]
-    API[REST / gRPC API]
-    CORE[Application Core<br/>Domain-Driven Design]
-    DB[(PostgreSQL)]
-    MSG[(RabbitMQ)]
-    EXT[External Systems<br/>(ERP, PLC, IIoT)]
-    UI -- HTTPS --> API
-    API -- CQRS / Mediator --> CORE
-    CORE -- EF Core --> DB
-    CORE -- Pub/Sub --> MSG
-    MSG -- Consumers --> CORE
-    API <-- WebHooks --> EXT
-```
-> Full ER & relational models are available in  
-> `PSS_ER_Modell.drawio` and `PSS_Relationale_Modell.drawio`.
+
+<div style="display: flex; justify-content: center; gap: 40px;">
+  <div style="text-align: center;">
+    <h3>ER Diagramm</h3>
+    <img src="https://raw.githubusercontent.com/Kush-Srigiri/PSS/main/PSS_ER_Modell.png" alt="ER Diagramm" style="max-width: 70%; height: auto;">
+  </div>
+  <div style="text-align: center;">
+    <h3>Relational Model</h3>
+    <img src="https://raw.githubusercontent.com/Kush-Srigiri/PSS/main/PSS_Relationale_Modell.png" alt="Relational Model" style="max-width: 70%; height: auto;">
+  </div>
+</div>
+
+<br>
+
+
+> Full ER & relational models are available in 
+> `PSS_ER_Modell.drawio` and `PSS_Relationale_Modell.drawio`.  
+
+
 
 ---
 
@@ -68,8 +70,6 @@ flowchart LR
 | Layer | Technology |
 |-------|------------|
 | Language | **C# 12**, .NET 8 LTS |
-| Persistence | PostgreSQL · Entity Framework Core |
-| Messaging | RabbitMQ (AMQP 0‑9‑1) |
 | Build & CI | GitHub Actions · `dotnet` CLI |
 | Testing | xUnit · FluentAssertions |
 | Docs | MkDocs Material |
@@ -82,41 +82,33 @@ flowchart LR
 git clone https://github.com/Kush-Srigiri/PSS.git
 cd PSS
 
-# 2 Configure connection string
-cp config/appsettings.Development.json.example    src/PSS/appsettings.Development.json
-# → update DB, MQ credentials
-
-# 3 Restore + build
-dotnet restore
-dotnet build --configuration Release
-
-# 4 Apply migrations & seed demo data
-dotnet ef database update --project src/PSS
-
-# 5 Run
-dotnet run --project src/PSS
+# 2 Run
+dotnet run 
 ```
-Navigate to **`https://localhost:5001`** and log in with the seeded *admin* account (`admin / admin123` by default).
+
 
 ---
 
-## ⚙️ Configuration
-All tunables live in **`config/appsettings.{Environment}.json`**.
-
-| Key | Purpose | Default |
-|-----|---------|---------|
-| `ConnectionStrings:Postgres` | DB endpoint | `Host=localhost;Port=5432;...` |
-| `MessageBus:Host` | RabbitMQ URL | `amqp://guest:guest@localhost:5672` |
-| `Kpi:RefreshIntervalSec` | Dashboard poll rate | `10` |
-
-> Environment variables override JSON keys: `PSS__ConnectionStrings__Postgres=...`.
-
----
 
 ## 🗄️ Database Model
-![ER diagram](docs/images/er_model.png)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Kush-Srigiri/PSS/main/PSS_ER_Modell.png" alt="ER Diagramm">
+</p>
+
 
 *See `/PSS_ER_Modell.drawio` for the editable diagram.*
+
+---
+
+## 🗄️ Relational Model
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Kush-Srigiri/PSS/main/PSS_Relationale_Modell.png" alt="Relational Model">
+</p>
+
+
+*See `/PSS_Relationale_Modell.drawio` for the editable diagram.*
 
 ---
 
