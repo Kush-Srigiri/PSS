@@ -8,8 +8,12 @@
              d:DesignHeight="550" d:DesignWidth="800">
     <StackPanel>
         <ScrollViewer VerticalScrollBarVisibility="Auto" Visibility="Visible" x:Name="Input">
-            <StackPanel Margin="20" VerticalAlignment="Top">
-
+            <StackPanel Margin="20,10,20,20" VerticalAlignment="Top">
+                <TextBlock Text="Article"
+                           FontSize="24"
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,20"/>
                 <!-- Name -->
                 <StackPanel Margin="0,10,0,0">
                     <Label Content="Name:" FontWeight="Bold" Foreground="#526D96" FontSize="16" />
