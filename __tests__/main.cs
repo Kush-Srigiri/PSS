@@ -54,6 +54,7 @@ public class main
 
     // Folgende Tests sollen fehlschlagen
     [TestMethod]
+    [ExpectedException(typeof(ArgumentException), "stockquantity cannot be below 1")]
     public void Artikel_NegativeStock_Fails()
     {
         var artikel = new Artikel("Tasche", "groß", "Stück", -5, false);
