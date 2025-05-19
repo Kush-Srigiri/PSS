@@ -60,5 +60,19 @@ public class main
         Assert.IsTrue(artikel.StockQuantity >= 0, "Artikel darf keinen negativen Lagerstand haben.");
     }
 
-    
+    [TestMethod]
+    public void Crypt_WrongPassword_ShouldFail()
+    {
+        string password1 = "abc123";
+        string password2 = "wrongpass";
+        string data = "SecretText";
+
+        var crypt1 = new Crypt(password1);
+        var crypt2 = new Crypt(password2);
+
+        var encrypted = crypt1.Encrypt(data);
+        var decrypted = crypt2.Decrypt(encrypted);
+
+        Assert.AreNotEqual(data, decrypted);
+    }
 }
