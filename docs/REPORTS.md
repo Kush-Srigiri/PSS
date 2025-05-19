@@ -109,7 +109,8 @@ Vacation
 ### 19.05.2025:  
 [Everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
 #### Description:
-
+- We fixed the darkmode, lightmode implementation
+- Created unsuccessful Tests
 
 ### 26.05.2025:  
 [@everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
