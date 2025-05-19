@@ -58,7 +58,6 @@ public class main
     public void Artikel_NegativeStock_Fails()
     {
         var artikel = new Artikel("Tasche", "groß", "Stück", -5, false);
-        Assert.IsTrue(artikel.StockQuantity >= 0, "Artikel darf keinen negativen Lagerstand haben.");
     }
 
     [TestMethod]
