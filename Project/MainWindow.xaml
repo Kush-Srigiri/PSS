@@ -17,7 +17,7 @@
     <viewModel:MainViewModel/>
   </Window.DataContext>
 
-  <Border x:Name="MainBorder" Background="#FEFBF3" CornerRadius="20" MouseDown="Border_MouseDown" BorderThickness="1" BorderBrush="Black">
+  <Border x:Name="MainBorder" Background="{DynamicResource PrimaryBrush}" CornerRadius="20" MouseDown="Border_MouseDown" BorderThickness="1" BorderBrush="Black">
     <StackPanel>
       <!-- Top Bar -->
       <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
@@ -65,7 +65,7 @@
 
         <!-- Sidebar -->
         <StackPanel Grid.Column="0">
-          <Border BorderBrush="#D3D3D3" BorderThickness="0,0,1,0" Height="550">
+          <Border BorderBrush="{DynamicResource NavButtonColorAndOutlineBrush}" BorderThickness="0,0,1,0" Height="550">
             <Grid>
               <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -74,9 +74,9 @@
                 <RowDefinition Height="Auto"/>
               </Grid.RowDefinitions>
 
-              <RadioButton Content="Home" Height="35" Style="{StaticResource MenuButtonTheme}" IsChecked="True" Command="{Binding HomeViewCommand}" Grid.Row="0"/>
-              <RadioButton Content="Artikel" Height="35" Style="{StaticResource MenuButtonTheme}" Command="{Binding ArtikelViewCommand}" Grid.Row="1"/>
-              <RadioButton Content="Settings" Height="35" Style="{StaticResource MenuButtonTheme}" Command="{Binding SettingsViewCommand}" Grid.Row="3"/>
+              <RadioButton Content="Home" Height="35" Style="{StaticResource MenuButtonTheme}" IsChecked="True" Command="{Binding HomeViewCommand}" Background="{DynamicResource NavButtonColorAndOutlineBrush}" Foreground="{DynamicResource ForeGroundBrush}" Grid.Row="0"/>
+              <RadioButton Content="Artikel" Height="35" Style="{StaticResource MenuButtonTheme}" Command="{Binding ArtikelViewCommand}" Background="{DynamicResource NavButtonColorAndOutlineBrush}" Foreground="{DynamicResource ForeGroundBrush}" Grid.Row="1"/>
+              <RadioButton Content="Settings" Height="35" Style="{StaticResource MenuButtonTheme}" Command="{Binding SettingsViewCommand}" Background="{DynamicResource NavButtonColorAndOutlineBrush}" Foreground="{DynamicResource ForeGroundBrush}" Grid.Row="3"/>
             </Grid>
           </Border>
         </StackPanel>

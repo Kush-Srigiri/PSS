@@ -12,22 +12,23 @@
       <Border Height="100" 
                     Margin="0,5,0,0" 
                     CornerRadius="8" 
-                    Background="#fcf3db" 
-                    BorderBrush="#E0E0E0" 
+                    Background="{DynamicResource ApperanceTextBrush}" 
+                    BorderBrush="{DynamicResource NavButtonColorAndOutlineBrush}" 
                     BorderThickness="1"
                     Padding="10">
         <StackPanel>
-          <TextBlock Text="Appearance" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" FontFamily="{StaticResource Roboto}"/>
+          <TextBlock Text="Appearance" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" FontFamily="{StaticResource Roboto}" Foreground="{DynamicResource ForeGroundBrush}"/>
           <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-            <TextBlock Text="Theme" FontSize="14"/>
-            <RadioButton Name="LightThemeRadioBTN" Content="Light" IsChecked="{Binding DarkTheme, Converter={StaticResource InverseBooleanConverter}}" Style="{StaticResource RadioButtonTheme}" VerticalAlignment="Center" Margin="20,0,0,0" />
-            <RadioButton Name="DarkThemeRadioBTN"  Content="Dark" VerticalAlignment="Center" IsChecked="{Binding DarkTheme}" Style="{StaticResource RadioButtonTheme}" Margin="20,0,0,0"/>
+            <TextBlock Text="Theme" FontSize="14" Foreground="{DynamicResource ForeGroundBrush}"/>
+            <RadioButton x:Name="LightThemeRadioBTN" Content="Light"  IsChecked="{Binding DarkTheme, Converter={StaticResource EnumToBoolConverter}, ConverterParameter=Light}" Style="{StaticResource RadioButtonTheme}" VerticalAlignment="Center" Margin="20,0,0,0" Foreground="{DynamicResource ForeGroundBrush}"/>
+            <RadioButton x:Name="DarkThemeRadioBTN"  Content="Dark" VerticalAlignment="Center" IsChecked="{Binding DarkTheme, Converter={StaticResource EnumToBoolConverter}, ConverterParameter=Dark}" Style="{StaticResource RadioButtonTheme}" Margin="20,0,0,0" Foreground="{DynamicResource ForeGroundBrush}"/>
+            <RadioButton x:Name="SystemThemeBTN"  Content="System" VerticalAlignment="Center" IsChecked="{Binding DarkTheme, Converter={StaticResource EnumToBoolConverter}, ConverterParameter=System}" Style="{StaticResource RadioButtonTheme}" Margin="20,0,0,0" Foreground="{DynamicResource ForeGroundBrush}"/>
           </StackPanel>  
           <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-            <TextBlock FontSize="14"><Run Language="de-ch" Text="Icons"/></TextBlock>
-            <RadioButton x:Name="LightRadioBTNIcon" Content="Light"  VerticalAlignment="Center" Margin="30,0,0,0" Style="{StaticResource RadioButtonTheme}" IsChecked="{Binding SelectedTheme, Converter={StaticResource EnumToBoolConverter}, ConverterParameter=Light}"/>
-            <RadioButton x:Name="NormalRadioBTNIcon" Content="Normal" VerticalAlignment="Center" Style="{StaticResource RadioButtonTheme}" Margin="20,0,0,0" IsChecked="{Binding SelectedTheme, Converter={StaticResource EnumToBoolConverter}, ConverterParameter=Normal}"/>
-            <RadioButton x:Name="DarkRadioBTNIcon" Content="Dark" VerticalAlignment="Center" Style="{StaticResource RadioButtonTheme}" Margin="20,0,0,0" IsChecked="{Binding SelectedTheme, Converter={StaticResource EnumToBoolConverter}, ConverterParameter=Dark}"/> 
+            <TextBlock FontSize="14" Foreground="{DynamicResource ForeGroundBrush}"><Run Language="de-ch" Text="Icons"/></TextBlock>
+            <RadioButton x:Name="LightRadioBTNIcon" Content="Light"  VerticalAlignment="Center" Margin="30,0,0,0" Style="{StaticResource RadioButtonTheme}" IsChecked="{Binding SelectedTheme, Converter={StaticResource EnumToBoolConverter}, ConverterParameter=Light}" Foreground="{DynamicResource ForeGroundBrush}"/>
+            <RadioButton x:Name="NormalRadioBTNIcon" Content="Normal" VerticalAlignment="Center" Style="{StaticResource RadioButtonTheme}" Margin="20,0,0,0" IsChecked="{Binding SelectedTheme, Converter={StaticResource EnumToBoolConverter}, ConverterParameter=Normal}" Foreground="{DynamicResource ForeGroundBrush}"/>
+            <RadioButton x:Name="DarkRadioBTNIcon" Content="Dark" VerticalAlignment="Center" Style="{StaticResource RadioButtonTheme}" Margin="20,0,0,0" IsChecked="{Binding SelectedTheme, Converter={StaticResource EnumToBoolConverter}, ConverterParameter=Dark}" Foreground="{DynamicResource ForeGroundBrush}"/> 
           </StackPanel>
         </StackPanel>
       </Border>
@@ -36,19 +37,19 @@
       <Border  
                     Margin="0,5,0,0" 
                     CornerRadius="8" 
-                    Background="#fcf3db" 
-                    BorderBrush="#E0E0E0" 
+                    Background="{DynamicResource ApperanceTextBrush}" 
+                    BorderBrush="{DynamicResource NavButtonColorAndOutlineBrush}" 
                     BorderThickness="1"
                     Padding="10">
         <StackPanel Orientation="Vertical">
-          <TextBlock Text="Data" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" FontFamily="{StaticResource Roboto}"/>
+          <TextBlock Text="Data" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" FontFamily="{StaticResource Roboto}" Foreground="{DynamicResource ForeGroundBrush}"/>
           <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Import" FontSize="13" FontFamily="{StaticResource ResourceKey=Roboto}" VerticalAlignment="Center" Width="40"/>
-            <Button Content="Import" Style="{StaticResource ButtonTheme}" Height="25" FontWeight="SemiBold" VerticalAlignment="Center" Margin="70,0,0,0" Click="Import"/>
+            <TextBlock Text="Import" FontSize="13" FontFamily="{StaticResource ResourceKey=Roboto}" Foreground="{DynamicResource ForeGroundBrush}" VerticalAlignment="Center" Width="40"/>
+            <Button Content="Import" Style="{StaticResource ButtonTheme}" Foreground="{DynamicResource ForeGroundBrush}" Height="25" Background="{ DynamicResource SettingsButtonBrush}" FontWeight="SemiBold" VerticalAlignment="Center" Margin="70,0,0,0" Click="Import"/>
           </StackPanel>
           <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-            <TextBlock Text="Export" FontSize="13" FontFamily="{StaticResource ResourceKey=Roboto}" VerticalAlignment="Center" Width="40"/>
-            <Button Content="Export" Style="{StaticResource ButtonTheme}" Height="25" FontWeight="SemiBold" VerticalAlignment="Center" Margin="70,0,0,0" Click="Export"/>
+            <TextBlock Text="Export" FontSize="13" FontFamily="{StaticResource ResourceKey=Roboto}" Foreground="{DynamicResource ForeGroundBrush}" VerticalAlignment="Center" Width="40"/>
+            <Button Content="Export" Style="{StaticResource ButtonTheme}" Foreground="{DynamicResource ForeGroundBrush}" Background="{ DynamicResource SettingsButtonBrush}" Height="25" FontWeight="SemiBold" VerticalAlignment="Center" Margin="70,0,0,0" Click="Export"/>
           </StackPanel>
         </StackPanel>
       </Border>

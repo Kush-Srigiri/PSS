@@ -23,16 +23,8 @@ namespace Project
             InitializeComponent();
             this.ShowInTaskbar = true;
             this.EmailTbx.Focus();
-
-            ThemeManager.ThemeChanged += ApplyTheme;
-            ApplyTheme();
         }
 
-        private void ApplyTheme()
-        {
-            this.Resources["ForegroundBrush"] = ThemeManager.GetForegroundBrush();
-            this.Resources["AccentBrush"] = ThemeManager.GetAccentBrush();
-        }
 
         private void Border_MouseEnter(object sender, MouseEventArgs e)
         {

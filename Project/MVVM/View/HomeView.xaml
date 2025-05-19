@@ -78,7 +78,8 @@
                        FontSize="24"
                        FontWeight="Bold"
                        HorizontalAlignment="Center"
-                       Margin="0,0,0,20"/>
+                       Margin="0,0,0,20"
+                       Foreground="{DynamicResource ForeGroundBrush}"/>
 
             <!-- Article List -->
             <ItemsControl ItemsSource="{Binding Entries}">

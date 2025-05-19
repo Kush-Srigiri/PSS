@@ -18,16 +18,8 @@ namespace Project
         {
             this.db = db;
             InitializeComponent();
-
-            ThemeManager.ThemeChanged += ApplyTheme;
-            ApplyTheme();
         }
 
-        private void ApplyTheme()
-        {
-            this.Resources["ForegroundBrush"] = ThemeManager.GetForegroundBrush();
-            this.Resources["AccentBrush"] = ThemeManager.GetAccentBrush();
-        }
 
         private void Border_MouseEnter(object sender, MouseEventArgs e)
         {
@@ -81,7 +73,8 @@ namespace Project
                 password TEXT NOT NULL
             );");
 
-            db.Execute("INSERT INTO User(id, email, password) VALUES ('1', ?, ?)", EmailTbx.Text, UserDataLogin.HashPassword(PasswordTbx.Password));
+            db.Execute("INSERT INTO User(id, email, password) VALUES ('1', ?, ?)", EmailTbx.Text,
+                UserDataLogin.HashPassword(PasswordTbx.Password));
 
             AppDataSave_service appData = new();
             appData.SaveUserLoginData(new UserDataLogin(EmailTbx.Text, PasswordTbx.Password, true));

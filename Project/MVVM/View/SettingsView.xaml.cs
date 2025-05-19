@@ -8,6 +8,7 @@ using System.Windows.Controls;
 using Microsoft.VisualBasic;
 using System.IO;
 using CsvHelper;
+using Microsoft.Windows.Themes;
 using Project.objects;
 using Project.services;
 
@@ -44,6 +45,19 @@ namespace Project.MVVM.View
                     break;
                 case ThemeOption.Dark:
                     DarkRadioBTNIcon.IsChecked = true;
+                    break;
+            }
+
+            switch (UIAppearance.DarkTheme)
+            {
+                case ColorThemeOption.System:
+                    SystemThemeBTN.IsChecked = true;
+                    break; 
+                case ColorThemeOption.Dark:
+                    DarkThemeRadioBTN.IsChecked = true;
+                    break;
+                case ColorThemeOption.Light:
+                    LightThemeRadioBTN.IsChecked = true;
                     break;
             }
 

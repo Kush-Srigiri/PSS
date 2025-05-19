@@ -10,7 +10,7 @@
         AllowsTransparency="True"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"  >
-  <Border Background="#FEFBF3" CornerRadius="20" BorderThickness="1" BorderBrush="#526D96">
+  <Border Background="{DynamicResource PrimaryBrush}" CornerRadius="20" BorderThickness="1" BorderBrush="#526D96">
     <StackPanel>
       <StackPanel  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="16,13,0,0" Orientation="Horizontal" MouseEnter="Border_MouseEnter"
                     MouseLeave="Border_MouseLeave" Width="418" AutomationProperties.IsOffscreenBehavior="Onscreen">

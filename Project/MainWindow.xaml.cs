@@ -13,8 +13,6 @@ namespace Project
         {
             InitializeComponent();
 
-            ThemeManager.ThemeChanged += ApplyTheme;
-            ApplyTheme();
 
             DB db = DB.Instance;
 
@@ -48,13 +46,6 @@ namespace Project
             }
         }
 
-        private void ApplyTheme()
-        {
-            MainBorder.Background = ThemeManager.GetBackgroundBrush();
-            MainBorder.BorderBrush = ThemeManager.CurrentTheme == Theme.Dark
-                ? ThemeManager.GetAccentBrush()
-                : ThemeManager.GetStandardBorderBrush();
-        }
 
         private void Border_MouseEnter(object sender, MouseEventArgs e)
         {

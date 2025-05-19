@@ -1,0 +1,14 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Color x:Key="PrimaryColor">#0d1b2a</Color>
+    <Color x:Key="ForeGroundColor"> #FFFFFF</Color>
+    <Color x:Key="NavButtonColorAndOutline">#1d2d44</Color>
+    <Color x:Key="ApperanceTextColor">#2F2736</Color>
+    <Color x:Key="SettingsButton">#594570</Color>
+    
+    <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource PrimaryColor}" />
+    <SolidColorBrush x:Key="ForeGroundBrush" Color="{StaticResource ForeGroundColor}" />
+    <SolidColorBrush x:Key="NavButtonColorAndOutlineBrush" Color="{StaticResource NavButtonColorAndOutline}" />
+    <SolidColorBrush x:Key="ApperanceTextBrush" Color="{StaticResource ApperanceTextColor}" />
+    <SolidColorBrush x:Key="SettingsButtonBrush" Color="{StaticResource SettingsButton}" />
+</ResourceDictionary>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using Microsoft.Windows.Themes;
 
 namespace Project.Settings
 {
@@ -10,16 +11,28 @@ namespace Project.Settings
         Dark
     }
 
+    public enum ColorThemeOption
+    {
+        Light,
+        Dark,
+        System
+    }
+
     class UISettings : ConfigurationSection
     {
-        [ConfigurationProperty("darkTheme", DefaultValue = false)]
-        public bool DarkTheme
+        [ConfigurationProperty("darkTheme", DefaultValue = (int)ColorThemeOption.System)]
+        public int DarkThemeOption
         {
-            get => (bool)this["darkTheme"];
+            get => (int)this["darkTheme"];
             set => this["darkTheme"] = value;
         }
+        public ColorThemeOption DarkTheme
+        {
+            get => (ColorThemeOption)DarkThemeOption;
+            set => DarkThemeOption = (int)value;
+        }
 
-        [ConfigurationProperty("iconTheme", DefaultValue = 1)]
+        [ConfigurationProperty("iconTheme", DefaultValue = (int)ThemeOption.Normal)]
         public int SelectedOption
         {
             get => (int)this["iconTheme"];
