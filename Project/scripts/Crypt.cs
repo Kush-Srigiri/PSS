@@ -15,12 +15,21 @@ namespace Project.scripts
 
     public class Crypt
     {
-        private const string KeyName = "Project"; // Unique key identifier
-        private byte[] _key;
+        private const string KeyName = "Project"; 
+        private const int SaltSize = 16;
+        private const int KeySize = 16;
+        private readonly byte[] _key;
+        private readonly string _keyIdentifier;
 
-        public Crypt(string password)
+
+        public Crypt(string password, string keyIdentifier = null)
         {
+            if (string.IsNullOrEmpty(password))
+                throw new ArgumentException("Password cannot be empty", nameof(password));
+
+            _keyIdentifier = keyIdentifier ?? Guid.NewGuid().ToString();
             _key = RetrieveOrGenerateKey(password);
+
         }
 
         private byte[] RetrieveOrGenerateKey(string password)
@@ -38,11 +47,18 @@ namespace Project.scripts
 
         private byte[] GenerateKey(string password)
         {
-            using (var pbkdf2 = new Rfc2898DeriveBytes(password, 16, 100000, HashAlgorithmName.SHA256))
+            byte[] salt = new byte[SaltSize];
+            using (var rng = new RNGCryptoServiceProvider())
             {
-                return pbkdf2.GetBytes(16); // 128-bit AES key
+                rng.GetBytes(salt);
+            }
+
+            using (var pbkdf2 = new Rfc2898DeriveBytes(password, salt, 100000, HashAlgorithmName.SHA256))
+            {
+                return pbkdf2.GetBytes(KeySize);
             }
         }
+
 
         private void StoreKeyInCredentialManager(byte[] key)
         {
@@ -72,6 +88,9 @@ namespace Project.scripts
 
         public byte[] Encrypt(string plainText)
         {
+            if (plainText == null)
+                throw new ArgumentNullException(nameof(plainText));
+
             using (Aes aes = Aes.Create())
             {
                 aes.Key = _key;
@@ -93,6 +112,9 @@ namespace Project.scripts
 
         public string Decrypt(byte[] cipherText)
         {
+            if (cipherText == null || cipherText.Length < 16)
+                throw new ArgumentException("Invalid cipher text", nameof(cipherText));
+
             using (Aes aes = Aes.Create())
             {
                 aes.Key = _key;

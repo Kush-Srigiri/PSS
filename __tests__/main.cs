@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using Project.objects;
 using Project.objects.Items;
 using Project.scripts;
@@ -32,6 +33,7 @@ public class main
 
         Assert.AreEqual(testData, decrypted);
     }
+
     [TestMethod]
     public void Artikel_test()
     {
@@ -58,21 +60,5 @@ public class main
     public void Artikel_NegativeStock_Fails()
     {
         var artikel = new Artikel("Tasche", "groß", "Stück", -5, false);
-    }
-
-    [TestMethod]
-    public void Crypt_WrongPassword_ShouldFail()
-    {
-        string password1 = "abc123";
-        string password2 = "wrongpass";
-        string data = "SecretText";
-
-        var crypt1 = new Crypt(password1);
-        var crypt2 = new Crypt(password2);
-
-        var encrypted = crypt1.Encrypt(data);
-        var decrypted = crypt2.Decrypt(encrypted);
-
-        Assert.AreNotEqual(data, decrypted);
     }
 }

@@ -17,13 +17,12 @@ public class Artikel : IArtikel
 
     public Artikel(string name, string description, string unit, int StockQuantity, bool insert = true)
     {
-        if (StockQuantity > 1)
-        {
-            throw new ArgumentException("stockquantity cannot be below 1");
-            return;
-        }
+	    if (StockQuantity < 1)
+	    {
+		    throw new ArgumentException("stockquantity cannot be below 1");
+	    }
 
-        this.name = name;
+	    this.name = name;
         this.description = description;
         this.unit = unit;
         this.StockQuantity = StockQuantity;
