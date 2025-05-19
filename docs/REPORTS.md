@@ -149,7 +149,8 @@
 #### Beschreibung:
 
 - Dark-/Light-Mode-Implementierung behoben  
-- Nicht erfolgreiche Tests erstellt  
+- Nicht erfolgreiche Tests erstellt
+- Alle Dokumente in Deutsch übersetzt 
 
 ---
 
