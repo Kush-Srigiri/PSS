@@ -11,10 +11,10 @@ public class main
     [TestMethod]
     public void ArtikelListItemTest()
     {
-		var expected = "TestArtikel";
-    	
+        var expected = "TestArtikel";
+
         var item = new ArtikelListItem("TestArtikel");
-        
+
         Assert.IsNotNull(item);
         Assert.AreSame(item.title, expected);
     }
@@ -29,20 +29,20 @@ public class main
 
         var encrypted = crt.Encrypt(testData);
         var decrypted = crt.Decrypt(encrypted);
-        
+
         Assert.AreEqual(testData, decrypted);
     }
     [TestMethod]
     public void Artikel_test()
     {
-        var a = new Artikel( "Stift", "blau", "Stück", 10, false);
-        
+        var a = new Artikel("Stift", "blau", "Stück", 10, false);
+
         Assert.AreEqual("Stift", a.name);
         Assert.AreEqual("blau", a.description);
         Assert.AreEqual("Stück", a.unit);
         Assert.AreEqual(10, a.StockQuantity);
     }
-    
+
     [TestMethod]
     public void User_Test()
     {
@@ -52,4 +52,27 @@ public class main
         Assert.IsTrue(user.ValidatePassword("Password"));
     }
 
+    // Folgende Tests sollen fehlschlagen
+    [TestMethod]
+    public void Artikel_NegativeStock_Fails()
+    {
+        var artikel = new Artikel("Tasche", "groß", "Stück", -5, false);
+        Assert.IsTrue(artikel.StockQuantity >= 0, "Artikel darf keinen negativen Lagerstand haben.");
+    }
+
+    [TestMethod]
+    public void Crypt_WrongPassword_ShouldFail()
+    {
+        string password1 = "abc123";
+        string password2 = "wrongpass";
+        string data = "SecretText";
+
+        var crypt1 = new Crypt(password1);
+        var crypt2 = new Crypt(password2);
+
+        var encrypted = crypt1.Encrypt(data);
+        var decrypted = crypt2.Decrypt(encrypted);
+
+        Assert.AreNotEqual(data, decrypted);
+    }
 }

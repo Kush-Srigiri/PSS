@@ -1,8 +1,8 @@
-<h1 align="center">✨Mockups Overview✨</h1>
+<h1 align="center">✨Mockup-Übersicht✨</h1>
 <p align="center">
-  A visual overview of all views in both 
+  Eine visuelle Übersicht aller Ansichten in beiden
   <mark style="background-color: #ffffff;"><strong>Light Mode</strong></mark> 
-  and 
+  und 
   <mark style="background-color: #000000; color: white;"><strong>Dark Mode</strong></mark>.<br>
 </p>
 
