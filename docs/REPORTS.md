@@ -1,128 +1,177 @@
-### 10.02.2025:
-[@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)
-#### Description:
-
-- Deleted and restored the whole Repository
-- Added new Files and Codes
-- Improved Plan managemenet
-
-
-### 17.02.2025:  
+### 10.02.2025  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
-#### Description:
+#### Beschreibung:
 
-- Discussed Process
-- Started with the ER-Diagramm
-- Mockup Drawings of the ER-Diagramm
-- Sketch of the SQL Project visualisation
+- Gesamtes Repository gelöscht und anschließend wiederhergestellt  
+- Neue Dateien und Code hinzugefügt  
+- Planmanagement verbessert  
 
+---
 
-### 24.02.2025:  
+### 17.02.2025  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
-#### Description:
-- Vacation
+#### Beschreibung:
 
-### 03.03.2025:  
+- Prozess besprochen  
+- Mit dem ER-Diagramm begonnen  
+- Mockup-Zeichnungen für das ER-Diagramm erstellt  
+- Skizze zur SQL-Projektvisualisierung angefertigt  
+
+---
+
+### 24.02.2025  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
-#### Description:
-- Vacation
+#### Beschreibung:
 
-### 10.03.2025:  
+- Urlaub  
+
+---
+
+### 03.03.2025  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
-#### Description:
-- Created a db singletone
-- Finished the ER-Diagramm
+#### Beschreibung:
 
-### 17.03.2025:  
+- Urlaub  
+
+---
+
+### 10.03.2025  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
-#### Description:
-- Tabelle Artikel Hinzugefügt
-- Added a scroll bar
-- Designed and implemeted Home screen
- 
-### 24.03.2025:  
+#### Beschreibung:
+
+- DB-Singleton erstellt  
+- ER-Diagramm abgeschlossen  
+
+---
+
+### 17.03.2025  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
-#### Description:
-- configured the scroll bar for better usability
-- Intigrated the Backend for Homescreen
-- Added a Messagebox
-- Configured the close buttons
-- Added the ER-Diagramm
+#### Beschreibung:
 
-### 31.03.2025:  
+- Tabelle **Artikel** hinzugefügt  
+- Scrollbalken ergänzt  
+- Homescreen entworfen und implementiert  
+
+---
+
+### 24.03.2025  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
-#### Description:
-- Together we researched what else would be included in a production control system.
-- We roughly drew the flow chart
-- We refined the UI again and the response time is now very fast.
+#### Beschreibung:
 
-### 04.04.2025:
+- Scrollbalken für bessere Usability konfiguriert  
+- Backend für Homescreen integriert  
+- Messagebox hinzugefügt  
+- Schaltflächen zum Schließen konfiguriert  
+- ER-Diagramm ergänzt  
+
+---
+
+### 31.03.2025  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
-### Descripton: 
-- We searched for new ideas what to implement in the project
-- We refined the code made it look better
-- added Documents
+#### Beschreibung:
 
-### 07.04.2025:  
+- Gemeinsam recherchiert, was ein Produktions­steuerungs­system sonst noch benötigt  
+- Ablaufdiagramm grob skizziert  
+- UI weiter verfeinert; Reaktionszeit jetzt sehr schnell  
+
+---
+
+### 04.04.2025  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
-#### Description:
-- We discussed what else we could add.
-- What everyone should still do
-- Added Import
+#### Beschreibung:
 
+- Nach neuen Ideen zur Projekt­erweiterung gesucht  
+- Code verfeinert und lesbarer gestaltet  
+- Dokumente hinzugefügt  
 
-### 14.04.2025:  
+---
+
+### 07.04.2025  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
-#### Description:
-- We have created a mockup.md and added pictures
-- We added our figma/mockup to the github
-- Refined and improved the UI
-- Article object still rewritten
+#### Beschreibung:
 
+- Weitere Funktions­ideen diskutiert  
+- Aufgaben für alle festgelegt  
+- Import-Funktion hinzugefügt  
 
-### 21.04.2025:  
+---
+
+### 14.04.2025  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
-#### Description:
-Vacation
+#### Beschreibung:
 
-### 28.04.2025:  
+- `mockup.md` erstellt und Bilder eingefügt  
+- Figma/Mockup zu GitHub hinzugefügt  
+- UI verfeinert und verbessert  
+- Article-Objekt erneut überarbeitet  
+
+---
+
+### 21.04.2025  
 [@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
-#### Description:
-Vacation
+#### Beschreibung:
 
-### 05.05.2025:  
+- Urlaub  
+
+---
+
+### 28.04.2025  
+[@everyone](https://github.com/kingkushgaming/PSS/blob/main/docs/CONTRIBUTING.md)  
+#### Beschreibung:
+
+- Urlaub  
+
+---
+
+### 05.05.2025  
 [@everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
-#### Description:
-- We started with the interfaces.
-- Created even more test examples
-- Improved HomeView
+#### Beschreibung:
 
+- Mit den Schnittstellen begonnen  
+- Weitere Testbeispiele erstellt  
+- HomeView verbessert  
 
-### 12.05.2025:  
+---
+
+### 12.05.2025  
 [@everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
-#### Description:
-- We have refined and improved the documentation
-- Implemented the import feature
-- Tested and fixed all test files
-- Added a Description
+#### Beschreibung:
 
-### 19.05.2025:  
-[Everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
-#### Description:
-- We fixed the darkmode, lightmode implementation
-- Created unsuccessful Tests
+- Dokumentation verfeinert und erweitert  
+- Import-Feature implementiert  
+- Alle Testdateien geprüft und Fehler behoben  
+- Beschreibung hinzugefügt  
 
-### 26.05.2025:  
+---
+
+### 19.05.2025  
 [@everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
-#### Description:
+#### Beschreibung:
 
+- Dark-/Light-Mode-Implementierung behoben  
+- Nicht erfolgreiche Tests erstellt
+- Alle Dokumente in Deutsch übersetzt 
 
-### 02.06.2025:  
+---
+
+### 26.05.2025  
 [@everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
-#### Description:
+#### Beschreibung:
 
+*(noch offen)*  
 
-### Due Date 
+---
+
+### 02.06.2025  
 [@everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
-#### Description:
- End of the project 
+#### Beschreibung:
+
+*(noch offen)*  
+
+---
+
+### Fälligkeitsdatum  
+[@everyone](https://github.com/kingkushgaming/PSS/edit/main/docs/CONTRIBUTING.md)  
+#### Beschreibung:
+
+- Projektende  

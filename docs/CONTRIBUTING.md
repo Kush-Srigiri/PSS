@@ -1,20 +1,19 @@
-## 👥 Contributers
+## 👥 Beitragende
 
-### 1. Jamie Poeffel (Backend Developer) 
-**Contribution:** Optimized database queries for faster response times.  
-- Improved SQL queries to reduce execution time by 40%.  
-- Added indexing to frequently queried columns. 
-- Removed unnecessary joins to enhance performance. 
+### 1. Jamie Poeffel (Backend-Entwickler) 
+**Beitrag:** Optimierte Datenbankabfragen für schnellere Antwortzeiten.  
+- SQL-Abfragen verbessert und die Ausführungszeit um 40 % reduziert.  
+- Indizes für häufig abgefragte Spalten hinzugefügt.  
+- Überflüssige Joins entfernt, um die Performance zu steigern.  
 
-### 2. Kush Srigiri (Frontend Developer)
-**Contribution:** Improved UI components for accessibility and responsiveness.   
-- Improved layout with better padding and font sizes for a good UI/UX flow.  
-- Refactored Styles for better maintainability.
+### 2. Kush Srigiri (Frontend-Entwickler)
+**Beitrag:** UI-Komponenten hinsichtlich Barrierefreiheit und Responsivität verbessert.  
+- Layout mit besserem Padding und angepassten Schriftgrößen für einen runden UI/UX-Flow optimiert.  
+- Styles refaktoriert, um die Wartbarkeit zu erhöhen.  
 
-### 3. Alessio Huber (Mockup Creator)  
-**Contribution:** Created an ER-Diagramm for better visibility
-- Improved planning for better Time Managemente and Visualization
-
+### 3. Alessio Huber (Mockup-Ersteller)  
+**Beitrag:** ER-Diagramm erstellt, um die Übersicht zu verbessern.  
+- Planung optimiert für besseres Zeitmanagement und Visualisierung.  
 
 ##
 
