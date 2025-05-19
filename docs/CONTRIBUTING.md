@@ -1,4 +1,4 @@
-## 👥 Beitragende
+## 👥 Mitwirkende
 
 ### 1. Jamie Poeffel (Backend-Entwickler) 
 **Beitrag:** Optimierte Datenbankabfragen für schnellere Antwortzeiten.  
