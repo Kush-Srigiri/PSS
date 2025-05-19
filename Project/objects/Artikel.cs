@@ -19,7 +19,7 @@ public class Artikel : IArtikel
     {
         if (StockQuantity > 1)
         {
-            throw new Error("stockquantity cannot be below 1");
+            throw new ArgumentException("stockquantity cannot be below 1");
             return;
         }
 
