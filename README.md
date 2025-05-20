@@ -1,25 +1,27 @@
 # ⚙️ **PSS — Produktions Steuerungs System**
 
 <p align="center">
-  <!-- GitHub Badges -->
-  <a href="https://github.com/Jamie-Poeffel/Chipstok" target="_blank">
-    <img src="https://img.shields.io/github/stars/Jamie-Poeffel/Chipstok?style=social" alt="Stars Badge"/>
-  </a>
-  <a href="https://github.com/Jamie-Poeffel/Chipstok/network/members" target="_blank">
-    <img src="https://img.shields.io/github/forks/Jamie-Poeffel/Chipstok?style=social" alt="Forks Badge"/>
-  </a>
-  <a href="https://github.com/Jamie-Poeffel/Chipstok/issues" target="_blank">
-    <img src="https://img.shields.io/github/issues/Jamie-Poeffel/Chipstok" alt="Issues Badge"/>
-  </a>
-  <a href="https://github.com/Jamie-Poeffel/Chipstok/pulls" target="_blank">
-    <img src="https://img.shields.io/github/issues-pr/Jamie-Poeffel/Chipstok" alt="Pull Requests Badge"/>
-  </a>
-  
-  <br/>
-  <!-- Other Badges -->
+    <!-- Other Badges -->
   <img src="https://github.com/Kush-Srigiri/PSS/actions/workflows/dotnet-test.yml/badge.svg" alt="Tests Badge"/>
   <img src="https://img.shields.io/badge/license-MIT-blue" alt="License Badge"/>
   <img src="https://img.shields.io/badge/version-1.0.0-brightgreen" alt="Version Badge"/>
+  <br/>
+  <!-- GitHub Badges -->
+  <a href="https://github.com/Kush-Srigiri/PSS" target="_blank">
+    <img src="https://img.shields.io/github/stars/Kush-Srigiri/PSS?style=normal" alt="Stars Badge"/>
+  </a>
+  <a href="https://github.com/Kush-Srigiri/PSS/network/members" target="_blank">
+    <img src="https://img.shields.io/github/forks/Kush-Srigiri/PSS?style=normal" alt="Forks Badge"/>
+  </a>
+  <a href="https://github.com/Kush-Srigiri/PSS/issues" target="_blank">
+    <img src="https://img.shields.io/github/issues/Kush-Srigiri/PSS" alt="Issues Badge"/>
+  </a>
+  <a href="https://github.com/Kush-Srigiri/PSS/pulls" target="_blank">
+    <img src="https://img.shields.io/github/issues-pr/Kush-Srigiri/PSS" alt="Pull Requests Badge"/>
+  </a>
+
+  
+
 </p>
 # 🚀 Verwendete Tools & Technologien
 
