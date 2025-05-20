@@ -32,12 +32,14 @@
   <img src="https://img.shields.io/badge/-GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" alt="GitHub Actions Badge"/>
 </p>
 
- 
+ ---
 
-
+<p align="center">
+    
 Willkommen bei **PSS**, deinem smarten Produktionssteuerungssystem!  
 Dieses Tool hilft dir dabei, Produktionsprozesse effizient zu steuern, zu überwachen und zu optimieren.  
 🔧 **Einfach. Flexibel. Zuverlässig.**
+</p>
 
 ---
 
