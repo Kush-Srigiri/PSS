@@ -20,12 +20,18 @@
     <img src="https://img.shields.io/github/issues-pr/Kush-Srigiri/PSS" alt="Pull Requests Badge"/>
   </a>
 
-  
-
 </p>
+
 # 🚀 Verwendete Tools & Technologien
 
-![C#](https://img.shields.io/badge/-C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white) ![.NET](https://img.shields.io/badge/-.NET%208-512BD4?style=for-the-badge&logo=.net&logoColor=white) ![EF Core](https://img.shields.io/badge/-Entity%20Framework%20Core-512BD4?style=for-the-badge&logo=.net&logoColor=white) ![xUnit](https://img.shields.io/badge/-xUnit-2E8B57?style=for-the-badge) ![GitHub Actions](https://img.shields.io/badge/-GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white) ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white) ![SQL Server](https://img.shields.io/badge/-SQL%20Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
+
+<p align="center">
+  <img src="https://img.shields.io/badge/-C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white" alt="C# Badge"/>
+  <img src="https://img.shields.io/badge/-.NET%208-512BD4?style=for-the-badge&logo=.net&logoColor=white" alt=".NET 8 Badge"/>
+  <img src="https://img.shields.io/badge/-Entity%20Framework%20Core-512BD4?style=for-the-badge&logo=.net&logoColor=white" alt="EF Core Badge"/>
+  <img src="https://img.shields.io/badge/-GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" alt="GitHub Actions Badge"/>
+</p>
+
  
 
 
