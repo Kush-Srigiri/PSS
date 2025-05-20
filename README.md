@@ -4,6 +4,17 @@
 ![License](https://img.shields.io/badge/license-MIT-blue)
 ![Version](https://img.shields.io/badge/version-1.0.0-brightgreen)
 
+# Verwendete Tools & Technologien
+
+- ![C#](https://img.shields.io/badge/-C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white) **C# 12**  
+- ![.NET](https://img.shields.io/badge/-.NET%208-512BD4?style=for-the-badge&logo=.net&logoColor=white) **.NET 8**  
+- ![EF Core](https://img.shields.io/badge/-Entity%20Framework%20Core-512BD4?style=for-the-badge&logo=.net&logoColor=white) **Entity Framework Core**  
+- ![xUnit](https://img.shields.io/badge/-xUnit-2E8B57?style=for-the-badge) **xUnit&nbsp;Tests**  
+- ![GitHub Actions](https://img.shields.io/badge/-GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white) **CI / CD**  
+- ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white) **Containerisation**  
+- ![SQL Server](https://img.shields.io/badge/-SQL%20Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white) **SQL Server (Datenbank)**  
+
+
 Willkommen bei **PSS**, deinem smarten Produktionssteuerungssystem!  
 Dieses Tool hilft dir dabei, Produktionsprozesse effizient zu steuern, zu überwachen und zu optimieren.  
 🔧 **Einfach. Flexibel. Zuverlässig.**
