@@ -1,4 +1,4 @@
-# ⚙️ **PSS — Produktions Steuerungs System**
+<h1 align="center">⚙️ <strong>PSS — Produktions Steuerungs System</strong></h1>
 
 <p align="center">
     <!-- Other Badges -->
@@ -22,8 +22,11 @@
 
 </p>
 
+
+
 # 🚀 Verwendete Tools & Technologien
 
+<br>
 
 <p align="center">
   <img src="https://img.shields.io/badge/-C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white" alt="C# Badge"/>
@@ -32,16 +35,10 @@
   <img src="https://img.shields.io/badge/-GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" alt="GitHub Actions Badge"/>
 </p>
 
- ---
-
-<p align="center">
-    
-Willkommen bei **PSS**, deinem smarten Produktionssteuerungssystem!  
-Dieses Tool hilft dir dabei, Produktionsprozesse effizient zu steuern, zu überwachen und zu optimieren.  
-🔧 **Einfach. Flexibel. Zuverlässig.**
-</p>
 
 ---
+
+<br>
 
 ## 📚 Inhaltsverzeichnis
 
@@ -52,11 +49,14 @@ Dieses Tool hilft dir dabei, Produktionsprozesse effizient zu steuern, zu überw
 
 ---
 
+<br>
+
 ## 📖 Dokumentation
 
 Hier findest du alles, was du brauchst, um PSS zu verstehen und optimal zu nutzen:
 
 👉 [**Zur Dokumentation**](docs/README.md)
+
 
 ### Inhalte:
 
@@ -67,6 +67,8 @@ Hier findest du alles, was du brauchst, um PSS zu verstehen und optimal zu nutze
 
 ---
 
+<br>
+
 ## 👥 Mitwirkende
 
 Grossen Dank an alle, die an diesem Projekt arbeiten und es stetig verbessern! 🎉
@@ -75,6 +77,8 @@ Grossen Dank an alle, die an diesem Projekt arbeiten und es stetig verbessern! �
 
 ---
 
+<br>
+
 ## 📝 Reports
 
 Hier findest du Berichte über Entwicklungen, Fehleranalysen und Optimierungen:
@@ -82,6 +86,8 @@ Hier findest du Berichte über Entwicklungen, Fehleranalysen und Optimierungen:
 👉 [**Zu den Reports**](docs/REPORTS.md)
 
 ---
+
+<br>
 
 ## 📃 Mockups
 
