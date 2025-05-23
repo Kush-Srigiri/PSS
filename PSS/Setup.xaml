@@ -1,0 +1,109 @@
+<Window x:Class="PSS.Setup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:PSS"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="400"
+        Background="Transparent"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen">
+  <Border Background="#FEFBF3" CornerRadius="20" BorderThickness="1" BorderBrush="#526D96">
+    <StackPanel>
+      <StackPanel x:Name="SetupScreen"  Visibility="Visible">
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="16,13,0,0"
+                            Orientation="Horizontal"
+                            Width="418" AutomationProperties.IsOffscreenBehavior="Onscreen">
+          <Border x:Name="CloseButton"
+                            Background="#EF9587"
+                            CornerRadius="1000"
+                            Width="12"
+                            Height="12"
+                            Cursor="Hand"
+                            MouseLeftButtonDown="Close_Click"
+                            MouseEnter="Border_MouseEnter"
+                            MouseLeave="Border_MouseLeave">
+            <Image Source="/x.png" Margin="2" Visibility="Hidden" Name="IconX" />
+          </Border>
+
+          <!-- Spacer -->
+          <Border Width="6" Background="Transparent"></Border>
+
+
+          <Border Background="Transparent" Width="340">
+          </Border>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+          <Label Content="Setup" FontSize="36" Foreground="#526D96" FontFamily="Arial Black"
+                           FontWeight="Bold"
+                           Margin="0,12,0,0">
+          </Label>
+        </StackPanel>
+        <StackPanel>
+          <Label Content="Email" Foreground="#526D96" FontSize="16" FontWeight="Bold" Margin="20,0
+          ,20,1"></Label>
+          <Border CornerRadius="10" BorderThickness="1" BorderBrush="Gray" Margin="20,1,20,0">
+            <TextBox x:Name="EmailTbx" Background="Transparent" Foreground="#526D96" Margin="10"
+                                 FontSize="16"
+                                 BorderBrush="Transparent" SelectionBrush="#00484744" BorderThickness="0"
+                                 FocusVisualStyle="{x:Null}" />
+          </Border>
+        </StackPanel>
+        <StackPanel Margin="0,0,0,0">
+          <Label Content="Password" Foreground="#526D96" FontSize="16" FontWeight="Bold" Margin="20,0,20,1"></Label>
+          <Border CornerRadius="10" BorderThickness="1" BorderBrush="Gray" Margin="20,1,20,0">
+            <PasswordBox x:Name="PasswordTbx" Background="Transparent" Foreground="#526D96" Margin="10"
+                                     FontSize="16" BorderBrush="Transparent" SelectionBrush="#00484744"
+                                     BorderThickness="0"
+                                     FocusVisualStyle="{x:Null}" />
+          </Border>
+        </StackPanel>
+        <StackPanel Margin="0,0,0,0">
+          <Label Content="Confirm" Foreground="#526D96" FontSize="16" FontWeight="Bold" Margin="20,0,20,1"></Label>
+          <Border CornerRadius="10" BorderThickness="1" BorderBrush="Gray" Margin="20,1,20,0">
+            <PasswordBox x:Name="ConfirmPasword" Background="Transparent" Foreground="#526D96" Margin="10"
+                                     FontSize="16" BorderBrush="Transparent" SelectionBrush="#00484744"
+                                     BorderThickness="0"
+                                     FocusVisualStyle="{x:Null}" KeyDown="PasswordTbx_KeyDown"/>
+          </Border>
+          <Label Name="PasswrodsError" Foreground="#EF9587" Content="Passwords must match" Visibility="Hidden" Margin="16,0,0,0" ></Label>
+        </StackPanel>
+        <StackPanel>
+          <Border Background="#526D96" Padding="20,5,20,5" CornerRadius="10" Margin="20,3,20,5"
+                            Focusable="True" MouseDown="Border_MouseDown" KeyDown="PasswordTbx_KeyDown">
+            <StackPanel>
+              <Label Name="LoginBtnName" HorizontalAlignment="Center" FontSize="16" Content="Complete"
+                                   Visibility="Visible" Foreground="White">
+              </Label>
+            </StackPanel>
+          </Border>
+        </StackPanel>
+      </StackPanel>
+      <Grid x:Name="LoadingScreen" Visibility="Collapsed">
+        <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+          <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,192,0,0">
+            <Grid Width="20" Height="20">
+              <Ellipse Name="circle1" Width="20" Height="20" Stroke="LightGray" StrokeThickness="2"/>
+              <Ellipse Name="dot1" Width="16" Height="16" Fill="LightGray"/>
+            </Grid>
+            <Grid Width="20" Height="20" Margin="10,0,0,0">
+              <Ellipse Name="circle2" Width="20" Height="20" Stroke="LightGray" StrokeThickness="2"/>
+              <Ellipse Name="dot2" Width="16" Height="16" Fill="LightGray"/>
+            </Grid>
+            <Grid Width="20" Height="20" Margin="10,0,0,0">
+              <Ellipse Name="circle3" Width="20" Height="20" Stroke="LightGray" StrokeThickness="2"/>
+              <Ellipse Name="dot3" Width="16" Height="16" Fill="LightGray"/>
+            </Grid>
+            <Grid Width="20" Height="20" Margin="10,0,0,0">
+              <Ellipse Name="circle4" Width="20" Height="20" Stroke="LightGray" StrokeThickness="2"/>
+              <Ellipse Name="dot4" Width="16" Height="16" Fill="LightGray"/>
+            </Grid>
+          </StackPanel>
+        </Grid>
+      </Grid>
+    </StackPanel>
+  </Border>
+
+</Window>

@@ -1,8 +1,8 @@
 using System.Security.Cryptography;
-using Project.objects;
-using Project.objects.Items;
-using Project.scripts;
-using Project.services;
+using PSS.objects;
+using PSS.objects.Items;
+using PSS.scripts;
+using PSS.services;
 
 namespace __tests__;
 
