@@ -1,14 +1,44 @@
-# ⚙️ **PSS — Produktions Steuerungs System**
+<h1 align="center">⚙️ <strong>PSS — Produktions Steuerungs System</strong></h1>
 
-![Tests](https://github.com/Kush-Srigiri/PSS/actions/workflows/dotnet-test.yml/badge.svg)
-![License](https://img.shields.io/badge/license-MIT-blue)
-![Version](https://img.shields.io/badge/version-1.0.0-brightgreen)
+<p align="center">
+    <!-- Other Badges -->
+  <img src="https://github.com/Kush-Srigiri/PSS/actions/workflows/dotnet-test.yml/badge.svg" alt="Tests Badge"/>
+  <img src="https://img.shields.io/badge/license-MIT-blue" alt="License Badge"/>
+  <img src="https://img.shields.io/badge/version-1.0.0-brightgreen" alt="Version Badge"/>
+  <br/>
+  <!-- GitHub Badges -->
+  <a href="https://github.com/Kush-Srigiri/PSS" target="_blank">
+    <img src="https://img.shields.io/github/stars/Kush-Srigiri/PSS?style=normal" alt="Stars Badge"/>
+  </a>
+  <a href="https://github.com/Kush-Srigiri/PSS/network/members" target="_blank">
+    <img src="https://img.shields.io/github/forks/Kush-Srigiri/PSS?style=normal" alt="Forks Badge"/>
+  </a>
+  <a href="https://github.com/Kush-Srigiri/PSS/issues" target="_blank">
+    <img src="https://img.shields.io/github/issues/Kush-Srigiri/PSS" alt="Issues Badge"/>
+  </a>
+  <a href="https://github.com/Kush-Srigiri/PSS/pulls" target="_blank">
+    <img src="https://img.shields.io/github/issues-pr/Kush-Srigiri/PSS" alt="Pull Requests Badge"/>
+  </a>
 
-Willkommen bei **PSS**, deinem smarten Produktionssteuerungssystem!  
-Dieses Tool hilft dir dabei, Produktionsprozesse effizient zu steuern, zu überwachen und zu optimieren.  
-🔧 **Einfach. Flexibel. Zuverlässig.**
+</p>
+
+
+
+# 🚀 Verwendete Tools & Technologien
+
+<br>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/-C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white" alt="C# Badge"/>
+  <img src="https://img.shields.io/badge/-.NET%208-512BD4?style=for-the-badge&logo=.net&logoColor=white" alt=".NET 8 Badge"/>
+  <img src="https://img.shields.io/badge/-Entity%20Framework%20Core-512BD4?style=for-the-badge&logo=.net&logoColor=white" alt="EF Core Badge"/>
+  <img src="https://img.shields.io/badge/-GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" alt="GitHub Actions Badge"/>
+</p>
+
 
 ---
+
+<br>
 
 ## 📚 Inhaltsverzeichnis
 
@@ -19,11 +49,14 @@ Dieses Tool hilft dir dabei, Produktionsprozesse effizient zu steuern, zu überw
 
 ---
 
+<br>
+
 ## 📖 Dokumentation
 
 Hier findest du alles, was du brauchst, um PSS zu verstehen und optimal zu nutzen:
 
 👉 [**Zur Dokumentation**](docs/README.md)
+
 
 ### Inhalte:
 
@@ -34,6 +67,8 @@ Hier findest du alles, was du brauchst, um PSS zu verstehen und optimal zu nutze
 
 ---
 
+<br>
+
 ## 👥 Mitwirkende
 
 Grossen Dank an alle, die an diesem Projekt arbeiten und es stetig verbessern! 🎉
@@ -42,6 +77,8 @@ Grossen Dank an alle, die an diesem Projekt arbeiten und es stetig verbessern! �
 
 ---
 
+<br>
+
 ## 📝 Reports
 
 Hier findest du Berichte über Entwicklungen, Fehleranalysen und Optimierungen:
@@ -49,6 +86,8 @@ Hier findest du Berichte über Entwicklungen, Fehleranalysen und Optimierungen:
 👉 [**Zu den Reports**](docs/REPORTS.md)
 
 ---
+
+<br>
 
 ## 📃 Mockups
 
