@@ -74,9 +74,9 @@
                 <RowDefinition Height="Auto"/>
               </Grid.RowDefinitions>
 
-              <RadioButton Content="Home" Height="35" Style="{StaticResource MenuButtonTheme}" IsChecked="True" Command="{Binding HomeViewCommand}" Background="{DynamicResource NavButtonColorAndOutlineBrush}" Foreground="{DynamicResource ForeGroundBrush}" Grid.Row="0"/>
-              <RadioButton Content="Artikel" Height="35" Style="{StaticResource MenuButtonTheme}" Command="{Binding ArtikelViewCommand}" Background="{DynamicResource NavButtonColorAndOutlineBrush}" Foreground="{DynamicResource ForeGroundBrush}" Grid.Row="1"/>
-              <RadioButton Content="Settings" Height="35" Style="{StaticResource MenuButtonTheme}" Command="{Binding SettingsViewCommand}" Background="{DynamicResource NavButtonColorAndOutlineBrush}" Foreground="{DynamicResource ForeGroundBrush}" Grid.Row="3"/>
+              <RadioButton Content="Home" Height="35" Style="{StaticResource MenuButtonTheme}" IsChecked="True" Command="{Binding HomeViewCommand}"  Foreground="{DynamicResource ForeGroundBrush}" Grid.Row="0"/>
+              <RadioButton Content="Artikel" Height="35" Style="{StaticResource MenuButtonTheme}" Command="{Binding ArtikelViewCommand}"  Foreground="{DynamicResource ForeGroundBrush}" Grid.Row="1"/>
+              <RadioButton Content="Settings" Height="35" Style="{StaticResource MenuButtonTheme}" Command="{Binding SettingsViewCommand}"  Foreground="{DynamicResource ForeGroundBrush}" Grid.Row="3"/>
             </Grid>
           </Border>
         </StackPanel>

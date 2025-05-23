@@ -30,11 +30,11 @@
 
     <Style.Triggers>
       <Trigger Property="IsMouseOver" Value="True">
-        <Setter Property="Background" Value="#E0E0E0"/>
+        <Setter Property="Background" Value="{DynamicResource NavIsChecked}"/>
       </Trigger>
 
       <Trigger Property="IsChecked" Value="True">
-        <Setter Property="Background" Value="#D3D3D3"/>
+        <Setter Property="Background" Value="{DynamicResource Nav}"/>
       </Trigger>
     </Style.Triggers>
   </Style>
