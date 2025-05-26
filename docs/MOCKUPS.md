@@ -22,8 +22,9 @@
 
 <p align="center">
   <img src="./Pics/Login-Light-Mode.png" width="45%"/> 
-  <img src="./Pics/Login-Dark-Mode.png" width="45%"/>
 </p>
+
+
 
 ---
 
