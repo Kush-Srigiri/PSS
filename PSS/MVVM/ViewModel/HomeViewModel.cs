@@ -27,7 +27,7 @@ namespace PSS.MVVM.ViewModel
 
                 for (int i = 0; i < rows; i++)
                 {
-                        Entries.Add(new ArtikelListItem(entries[i, 1]));
+                        Entries.Add(new ArtikelListItem(new Artikel(entries[i, 1], entries[i, 2], entries[i, 3], Convert.ToInt32(entries[i, 4]), false)));
                 }
             }
         }

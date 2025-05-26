@@ -10,7 +10,7 @@
     <UserControl.Resources>
         <ResourceDictionary Source="../../assets/Themes/ListItem.xaml" />
     </UserControl.Resources>
-    
+
     <UserControl.DataContext>
         <viewModel:HomeViewModel />
     </UserControl.DataContext>
@@ -25,7 +25,7 @@
                         <ControlTemplate TargetType="Thumb">
                             <Border Background="{TemplateBinding Background}"
                                     CornerRadius="8"
-                                    SnapsToDevicePixels="True"/>
+                                    SnapsToDevicePixels="True" />
                         </ControlTemplate>
                     </Setter.Value>
                 </Setter>
@@ -35,16 +35,16 @@
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="RepeatButton">
-                            <Grid Visibility="Collapsed"/>
+                            <Grid Visibility="Collapsed" />
                         </ControlTemplate>
                     </Setter.Value>
                 </Setter>
             </Style>
 
             <Style TargetType="ScrollBar">
-                <Setter Property="Background" Value="Transparent"/>
-                <Setter Property="Width" Value="5"/>
-                <Setter Property="Foreground" Value="Gray"/>
+                <Setter Property="Background" Value="Transparent" />
+                <Setter Property="Width" Value="5" />
+                <Setter Property="Foreground" Value="Gray" />
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="ScrollBar">
@@ -53,7 +53,7 @@
                                     <Track.DecreaseRepeatButton>
                                         <RepeatButton Command="ScrollBar.LineUpCommand"
                                                       Style="{StaticResource ScrollBarButtonStyle}"
-                                                      IsTabStop="False"/>
+                                                      IsTabStop="False" />
                                     </Track.DecreaseRepeatButton>
                                     <Track.Thumb>
                                         <Thumb Style="{StaticResource ModernThumbStyle}" />
@@ -61,7 +61,7 @@
                                     <Track.IncreaseRepeatButton>
                                         <RepeatButton Command="ScrollBar.LineDownCommand"
                                                       Style="{StaticResource ScrollBarButtonStyle}"
-                                                      IsTabStop="False"/>
+                                                      IsTabStop="False" />
                                     </Track.IncreaseRepeatButton>
                                 </Track>
                             </Grid>
@@ -79,14 +79,25 @@
                        FontWeight="Bold"
                        HorizontalAlignment="Center"
                        Margin="0,0,0,20"
-                       Foreground="{DynamicResource ForeGroundBrush}"/>
+                       Foreground="{DynamicResource ForeGroundBrush}" />
 
             <!-- Article List -->
             <ItemsControl ItemsSource="{Binding Entries}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <Border Style="{StaticResource ListViewItemBorderStyle}" Margin="0,5 ">
-                            <TextBlock Text="{Binding title}" />
+                            <StackPanel>
+                                <TextBlock Text="{Binding title}" Foreground="{DynamicResource ForeGroundBrush}" FontWeight="Bold" />
+                                <TextBlock Text="{Binding description }" Foreground="{DynamicResource ForeGroundBrush}" FontSize="12"/>
+                            </StackPanel>
+                            <Border.ToolTip>
+                                <StackPanel>
+                                    <TextBlock Text="{Binding title}" FontWeight="Bold" FontSize="14" />
+                                    <TextBlock Text="{Binding description}" TextWrapping="Wrap" />
+                                    <TextBlock Text="{Binding unit}" />
+                                    <TextBlock Text="{Binding stockQuantity, StringFormat = 'Stock: {0}'}"/>
+                                </StackPanel>
+                            </Border.ToolTip>
                         </Border>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>

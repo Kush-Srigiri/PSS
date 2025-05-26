@@ -14,7 +14,7 @@ public class main
     {
         var expected = "TestArtikel";
 
-        var item = new ArtikelListItem("TestArtikel");
+        var item = new ArtikelListItem(new Artikel("TestArtikel", "Test desc", "liter", 10, false));
 
         Assert.IsNotNull(item);
         Assert.AreSame(item.title, expected);

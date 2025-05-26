@@ -9,24 +9,29 @@ public class ThemeManager
 
     public static void ApplyTheme(ColorThemeOption themeOption)
     {
-        if (_currentTheme != null)
-        {
-            Application.Current.Resources.MergedDictionaries.Remove(_currentTheme);
-        }
 
         string themeFile = themeOption switch
         {
-            ColorThemeOption.System => IsSystemInDarkMode() ? "assets/Colors/Darkmode.xaml" : "assets/Colors/Lightmode.xaml",
-            ColorThemeOption.Dark => "assets/Colors/Darkmode.xaml",
-            _ => "assets/Colors/Lightmode.xaml"
+            ColorThemeOption.System => IsSystemInDarkMode() ? "pack://application:,,,/assets/Colors/Darkmode.xaml" : "pack://application:,,,/assets/Colors/Lightmode.xaml",
+            ColorThemeOption.Dark => "pack://application:,,,/assets/Colors/Darkmode.xaml",
+            _ => "pack://application:,,,/assets/Colors/Lightmode.xaml"
         };
 
-        _currentTheme = new ResourceDictionary
+        var newTheme = new ResourceDictionary
         {
-            Source = new Uri(themeFile, UriKind.Relative)
+            Source = new Uri(themeFile, UriKind.Absolute)
         };
 
-        Application.Current.Resources.MergedDictionaries.Add(_currentTheme);
+        Application.Current.Dispatcher.Invoke(() =>
+        {
+            if (_currentTheme != null)
+            {
+                Application.Current.Resources.MergedDictionaries.Remove(_currentTheme);
+            }
+
+            Application.Current.Resources.MergedDictionaries.Add(newTheme);
+            _currentTheme = newTheme;
+        });
     }
 
     private static bool IsSystemInDarkMode()
