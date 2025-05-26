@@ -195,7 +195,7 @@
 - Dark-/Light-Mode-Implementierung hatte nochmals eine Fehler angezeigt also haben wir es wieder behoben
 - Excel sheet ausgeführt
 - Eine Plannung erstellt was wir in unsere ca. 7 minutigen Video vortragen werden
--
+- Im HomeView die Entries mit Infos gefüllt
 
 ---
 
