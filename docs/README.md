@@ -130,9 +130,6 @@ Die komplette Doku liegt im Ordner **[`docs`](./docs)** und wird automatisch auf
 <br>
 
 ## Roadmap
-- [ ] OPC UA-Treiber für direkte SPS-Anbindung
-- [ ] Mobile-first responsives UI  
-- [ ] KI-gestützte Terminoptimierung (Genetischer Algorithmus)  
 - [ ] Mehrsprachigkeit (EN/DE)  
 
 ---
