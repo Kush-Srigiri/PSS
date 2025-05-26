@@ -1,0 +1,50 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  
+  <Style TargetType="RadioButton" x:Key="RadioButtonTheme">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="RadioButton">
+          <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="2">
+            <Border x:Name="OuterCircle"
+                    Width="14" Height="14"
+                    CornerRadius="7"
+                    BorderBrush="{DynamicResource BorderBrush}"
+                    BorderThickness="1.5"
+                    Background="Transparent"
+                    VerticalAlignment="Center">
+
+              <Ellipse x:Name="InnerCircle"
+                       Width="7" Height="7"
+                       Fill="Transparent"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+            </Border>
+
+            <TextBlock Text="{TemplateBinding Content}"
+                       VerticalAlignment="Center"
+                       Margin="6,0,0,0"
+                       FontSize="12"
+                       Foreground="{DynamicResource ForeGroundBrush}"/>
+          </StackPanel>
+
+          <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+              <Setter TargetName="OuterCircle" Property="BorderBrush" Value="{DynamicResource HoverBrush}"/>
+            </Trigger>
+
+            <Trigger Property="IsChecked" Value="True">
+              <Setter TargetName="InnerCircle" Property="Fill" Value="{DynamicResource CheckedBrush}"/>
+            </Trigger>
+
+            <Trigger Property="IsEnabled" Value="False">
+              <Setter TargetName="OuterCircle" Property="Opacity" Value="0.4"/>
+              <Setter Property="Foreground" Value="Gray"/>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

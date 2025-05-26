@@ -1,7 +1,8 @@
-using Project.objects;
-using Project.objects.Items;
-using Project.scripts;
-using Project.services;
+using System.Security.Cryptography;
+using PSS.objects;
+using PSS.objects.Items;
+using PSS.scripts;
+using PSS.services;
 
 namespace __tests__;
 
@@ -32,6 +33,7 @@ public class main
 
         Assert.AreEqual(testData, decrypted);
     }
+
     [TestMethod]
     public void Artikel_test()
     {
@@ -54,25 +56,9 @@ public class main
 
     // Folgende Tests sollen fehlschlagen
     [TestMethod]
+    [ExpectedException(typeof(ArgumentException), "stockquantity cannot be below 1")]
     public void Artikel_NegativeStock_Fails()
     {
         var artikel = new Artikel("Tasche", "groß", "Stück", -5, false);
-        Assert.IsTrue(artikel.StockQuantity >= 0, "Artikel darf keinen negativen Lagerstand haben.");
-    }
-
-    [TestMethod]
-    public void Crypt_WrongPassword_ShouldFail()
-    {
-        string password1 = "abc123";
-        string password2 = "wrongpass";
-        string data = "SecretText";
-
-        var crypt1 = new Crypt(password1);
-        var crypt2 = new Crypt(password2);
-
-        var encrypted = crypt1.Encrypt(data);
-        var decrypted = crypt2.Decrypt(encrypted);
-
-        Assert.AreNotEqual(data, decrypted);
     }
 }

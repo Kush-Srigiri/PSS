@@ -1,0 +1,34 @@
+﻿<Application x:Class="PSS.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:PSS"
+             xmlns:viewModel="clr-namespace:PSS.MVVM.ViewModel"
+             xmlns:view="clr-namespace:PSS.MVVM.View"
+             xmlns:converters="clr-namespace:PSS.Converters"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/assets/Themes/MenuButtonTheme.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/assets/Themes/RadioButtonTheme.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/assets/Themes/ListItem.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/assets/Themes/ButtonTheme.xaml"/>
+      </ResourceDictionary.MergedDictionaries>
+
+      <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
+        <view:HomeView/>
+      </DataTemplate>
+
+      <DataTemplate DataType="{x:Type viewModel:ArtikelViewModel}">
+        <view:ArtikelView/>
+      </DataTemplate>
+
+      <DataTemplate DataType="{x:Type viewModel:SettingsViewModel}">
+        <view:SettingsView/>
+      </DataTemplate>
+      <converters:InverseBooleanConverter x:Key="InverseBooleanConverter"/>
+      <converters:EnumToBoolConverter x:Key="EnumToBoolConverter"/>
+      <FontFamily x:Key="Roboto">/assets/Fonts/Roboto/#Roboto</FontFamily>
+    </ResourceDictionary>
+    </Application.Resources>
+</Application>
