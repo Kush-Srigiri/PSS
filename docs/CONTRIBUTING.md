@@ -3,7 +3,7 @@
 ### 1. Jamie Poeffel (Backend-Entwickler) 
 **Beitrag:** Optimierte Datenbankabfragen für schnellere Antwortzeiten.  
 - SQL-Abfragen verbessert und die Ausführungszeit um 40 % reduziert.  
-- Indizes für häufig abgefragte Spalten hinzugefügt.  
+- Indizes für häufig abgefragte Spalten hinzugefügt.  https://github.com/Kush-Srigiri/PSS/blob/main/docs/CONTRIBUTING.md
 - Überflüssige Joins entfernt, um die Performance zu steigern.  
 
 ### 2. Kush Srigiri (Frontend-Entwickler)
