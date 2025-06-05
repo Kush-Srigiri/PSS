@@ -56,6 +56,9 @@ namespace PSS.services
         /// <param name="parameters">(Optional) params</param>
         public void Execute(string query, params string[] parameters)
         {
+            /// Execute function that has a query and params for that query
+            ///
+            /// Opens an connection if the connection is lost somehow
             if (conn.State != System.Data.ConnectionState.Open)
             {
                 conn.Open();
