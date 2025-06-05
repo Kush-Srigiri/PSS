@@ -2,8 +2,7 @@ name: "Deploy PSS"
 
 on: 
   push:
-    tags:
-      - "pss/v*"
+    branches: ["main"]
 
 env:
   PROJECT_PATH: PSS/PSS.csproj
