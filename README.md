@@ -97,10 +97,17 @@ Hier findest du alle Mockups der App, bevor wir mit der Entwicklung begonnen hab
 
 ---
 
-## 🌫️ Nutzung
+## 🔧 Nutzung
 
 Hier findest du ein Video, das die Nutzung des PSS anschaulich erklärt.
 
-👉 [**Zum Video**](docs/Pics/PSS_Video_Kush_Jamie_Alessio.mp4)
+👉 [**Zum Video**](https://github.com/Kush-Srigiri/PSS/raw/refs/heads/main/docs/Pics/PSS_Video_Kush_Jamie_Alessio.mp4)
+
+---
+
+<video width="320" height="240" controls>
+  <source src="https://github.com/Kush-Srigiri/PSS/raw/refs/heads/main/docs/Pics/PSS_Video_Kush_Jamie_Alessio.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ---
