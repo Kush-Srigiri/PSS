@@ -21,13 +21,15 @@
 4. [Schnellstart](#schnellstart)
 5. [Datenbankmodell](#datenbankmodell)
 6. [Relationales Modell](#relationales-modell)
-7. [Tests](#tests)
-8. [Dokumentation](#dokumentation)
-9. [Roadmap](#roadmap)
-10. [Beitragen](#beitragen)
-11. [Sicherheit](#sicherheit)
-12. [Lizenz](#lizenz)
-13. [Kontakt](#kontakt)
+7. [Flowchart](#flowchart)
+8. [UML](#uml)
+9. [Tests](#tests)
+10. [Dokumentation](#dokumentation)
+11. [Roadmap](#roadmap)
+12. [Beitragen](#beitragen)
+13. [Sicherheit](#sicherheit)
+14. [Lizenz](#lizenz)
+15. [Kontakt](#kontakt)
 
 ---
 <br>
@@ -113,6 +115,30 @@ dotnet run
 ---
 <br>
 
+## Flowchart
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Kush-Srigiri/PSS/main/Flowchart_PSS.png" alt="Flowchart">
+</p>
+
+
+*Bearbeitbares Diagramm siehe [`Flowchart_PSS.drawio`](./Flowchart_PSS.drawio).*
+
+---
+<br>
+
+## UML
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Kush-Srigiri/PSS/main/UML_PSS.png" alt="UML Diagramm">
+</p>
+
+
+*Bearbeitbares Diagramm siehe [`UML_PSS.drawio`](./UML_PSS.drawio).*
+
+---
+<br>
+
 ## Tests 
 ```bash
 dotnet test
@@ -130,7 +156,7 @@ Die komplette Doku liegt im Ordner **[`docs`](./docs)** und wird automatisch auf
 <br>
 
 ## Roadmap
-- [ ] Mehrsprachigkeit (EN/DE)  
+- [ ] Hell- & Dunkelmodus  
 
 ---
 <br>
