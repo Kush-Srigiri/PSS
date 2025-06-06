@@ -95,8 +95,8 @@ namespace PSS.MVVM.View
                         string name = recordDict["name"]?.ToString();
                         string description = recordDict["description"]?.ToString();
                         string unit = recordDict["unit"]?.ToString();
-                        int StockQuantity = Convert.ToInt32(recordDict["stockquantity"]);
-                        string CreationDate = recordDict["creationdate"]?.ToString();
+                        int StockQuantity = Convert.ToInt32(recordDict["StockQuantity"]);
+                        string CreationDate = recordDict["timestamp"]?.ToString();
 
                         Artikel artikel = new Artikel(name, description, unit, StockQuantity, CreationDate);
                     }
