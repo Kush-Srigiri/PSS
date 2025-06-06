@@ -53,21 +53,21 @@
     <tr>
       <td align="center">
         <h3>ER-Diagramm</h3>
-        <img src="https://raw.githubusercontent.com/Kush-Srigiri/PSS/main/PSS_ER_Modell.png" alt="ER-Diagramm" width="400">
+        <img src="https://raw.githubusercontent.com/Kush-Srigiri/PSS/PSS_ER_Modell.png" alt="ER-Diagramm" width="400">
       </td>
       <td align="center">
         <h3>Relationales Modell</h3>
-        <img src="https://raw.githubusercontent.com/Kush-Srigiri/PSS/main/PSS_Relationale_Modell.png" alt="Relationales Modell" width="400">
+        <img src="https://raw.githubusercontent.com/Kush-Srigiri/PSS/PSS_Relationale_Modell.png" alt="Relationales Modell" width="400">
       </td>
     </tr>
     <tr>
       <td align="center">
         <h3>Flowchart</h3>
-        <img src="https://raw.githubusercontent.com/Kush-Srigiri/PSS/main/Flowchart_PSS.png" alt="Flowchart" width="400">
+        <img src="https://raw.githubusercontent.com/Kush-Srigiri/PSS/Flowchart_PSS.drawio" alt="Flowchart" width="400">
       </td>
       <td align="center">
         <h3>UML</h3>
-        <img src="https://raw.githubusercontent.com/Kush-Srigiri/PSS/main/UML_PSS.png" alt="UML Diagramm" width="400">
+        <img src="https://raw.githubusercontent.com/Kush-Srigiri/PSS/UML_PSS.png" alt="UML Diagramm" width="400">
       </td>
     </tr>
   </table>
