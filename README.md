@@ -101,7 +101,9 @@ Hier findest du alle Mockups der App, bevor wir mit der Entwicklung begonnen hab
 
 Hier findest du ein Video, das die Nutzung des PSS anschaulich erklärt.
 
-[![Video ansehen](docs/Pics/video.png)](docs/Pics/PSS_Video_Kush_Jamie_Alessio.mp4)
+👉 [**Zum Video**](docs/Pics/PSS_Video_Kush_Jamie_Alessio.mp4)
+
+---
 
 
 ---
