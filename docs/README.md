@@ -74,7 +74,7 @@
 </div>
 
 > Vollständige ER-, relationale Modelle, Flowchart und UML findest du in  
-> [`PSS_ER_Modell.drawio`](./PSS_ER_Modell.drawio), [`PSS_Relationale_Modell.drawio`](./PSS_Relationale_Modell.drawio), [`Flowchart_PSS.drawio`](./Flowchart_PSS.drawio) und [`UML_PSS.drawio`](./UML_PSS.drawio).
+> [`PSS_ER_Modell.drawio`](../main/PSS_ER_Modell.drawio), [`PSS_Relationale_Modell.drawio`](../main/PSS_Relationale_Modell.drawio), [`Flowchart_PSS.drawio`](../main/Flowchart_PSS.drawio) und [`UML_PSS.drawio`](../main/UML_PSS.drawio).
 
 <br>
 
@@ -113,7 +113,7 @@ dotnet run
 </p>
 
 
-*Bearbeitbares Diagramm siehe [`PSS_ER_Modell.drawio`](./PSS_ER_Modell.drawio).*
+*Bearbeitbares Diagramm siehe [`PSS_ER_Modell.drawio`](../main/PSS_ER_Modell.drawio).*
 
 ---
 <br>
@@ -125,7 +125,7 @@ dotnet run
 </p>
 
 
-*Bearbeitbares Diagramm siehe [`PSS_Relationale_Modell.drawio`](./PSS_Relationale_Modell.drawio).*
+*Bearbeitbares Diagramm siehe [`PSS_Relationale_Modell.drawio`](../main/PSS_Relationale_Modell.drawio).*
 
 ---
 <br>
@@ -137,7 +137,7 @@ dotnet run
 </p>
 
 
-*Bearbeitbares Diagramm siehe [`Flowchart_PSS.drawio`](./Flowchart_PSS.drawio).*
+*Bearbeitbares Diagramm siehe [`Flowchart_PSS.drawio`](../main/Flowchart_PSS.drawio).*
 
 ---
 <br>
@@ -149,7 +149,7 @@ dotnet run
 </p>
 
 
-*Bearbeitbares Diagramm siehe [`UML_PSS.drawio`](./UML_PSS.drawio).*
+*Bearbeitbares Diagramm siehe [`UML_PSS.drawio`](../main/UML_PSS.drawio).*
 
 ---
 <br>
