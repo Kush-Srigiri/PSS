@@ -63,7 +63,7 @@
     <tr>
       <td align="center">
         <h3>Flowchart</h3>
-        <img src="https://raw.githubusercontent.com/Kush-Srigiri/PSS/main/Flowchart_PSS.drawio" alt="Flowchart" width="400">
+        <img src="https://raw.githubusercontent.com/Kush-Srigiri/PSS/main/Flowchart_PSS.png" alt="Flowchart" width="400">
       </td>
       <td align="center">
         <h3>UML</h3>
