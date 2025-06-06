@@ -48,21 +48,36 @@
 
 ## Architektur 
 
-<div style="display: flex; justify-content: center; gap: 40px;">
-  <div style="text-align: center;">
-    <h3>ER-Diagramm</h3>
-    <img src="https://raw.githubusercontent.com/Kush-Srigiri/PSS/main/PSS_ER_Modell.png" alt="ER-Diagramm" style="max-width: 70%; height: auto;">
-  </div>
-  <div style="text-align: center;">
-    <h3>Relationales Modell</h3>
-    <img src="https://raw.githubusercontent.com/Kush-Srigiri/PSS/main/PSS_Relationale_Modell.png" alt="Relationales Modell" style="max-width: 70%; height: auto;">
-  </div>
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <h3>ER-Diagramm</h3>
+        <img src="https://raw.githubusercontent.com/Kush-Srigiri/PSS/main/PSS_ER_Modell.png" alt="ER-Diagramm" width="400">
+      </td>
+      <td align="center">
+        <h3>Relationales Modell</h3>
+        <img src="https://raw.githubusercontent.com/Kush-Srigiri/PSS/main/PSS_Relationale_Modell.png" alt="Relationales Modell" width="400">
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <h3>Flowchart</h3>
+        <img src="https://raw.githubusercontent.com/Kush-Srigiri/PSS/main/Flowchart_PSS.png" alt="Flowchart" width="400">
+      </td>
+      <td align="center">
+        <h3>UML</h3>
+        <img src="https://raw.githubusercontent.com/Kush-Srigiri/PSS/main/UML_PSS.png" alt="UML Diagramm" width="400">
+      </td>
+    </tr>
+  </table>
 </div>
+
+> Vollständige ER-, relationale Modelle, Flowchart und UML findest du in  
+> [`PSS_ER_Modell.drawio`](./PSS_ER_Modell.drawio), [`PSS_Relationale_Modell.drawio`](./PSS_Relationale_Modell.drawio), [`Flowchart_PSS.drawio`](./Flowchart_PSS.drawio) und [`UML_PSS.drawio`](./UML_PSS.drawio).
 
 <br>
 
-> Vollständige ER- & relationale Modelle findest du in  
-> [`PSS_ER_Modell.drawio`](./PSS_ER_Modell.drawio) und [`PSS_Relationale_Modell.drawio`](./PSS_Relationale_Modell.drawio).
 ---
 
 ## Technologie-Stack
