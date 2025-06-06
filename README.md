@@ -97,7 +97,7 @@ Hier findest du alle Mockups der App, bevor wir mit der Entwicklung begonnen hab
 
 ---
 
-## 🌫️ Nutzung
+## 🔧 Nutzung
 
 Hier findest du ein Video, das die Nutzung des PSS anschaulich erklärt.
 
